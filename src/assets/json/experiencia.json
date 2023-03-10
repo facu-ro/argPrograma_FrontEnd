@@ -1,0 +1,20 @@
+{
+
+    "sobre_mi":"Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Ipsum, omnis aspernatur. Sapiente corrupti repudiandae dolores consequuntur repellat inventore neque, est modi facilis, dolor ab quisquam necessitatibus totam velit autem tempora similique rerum ratione quam repellendus obcaecati asperiores et? Obcaecati maiores illo aliquam ipsum facere odit reprehenderit consequuntur est incidunt repellendus!",
+
+    "experiencia": 
+    [
+        {
+            "id":1,
+            "imagen": "../assets/imagenes/logo-arg-programa.png",
+            "año": "2022",
+            "descripcion": "mi primer experiencia"
+        },
+        {
+            "id":2,
+            "imagen": "../assets/imagenes/logo-arg-programa.png",
+            "año": "2022",
+            "descripcion": "mi segunda experiencia"
+        }
+    ]
+}

@@ -26,7 +26,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/jquery-3.4.1.min.js"]
           },
           "configurations": {
             "production": {
@@ -63,6 +63,8 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "arg-programa:build"
+             
+
           },
           "configurations": {
             "production": {
@@ -90,7 +92,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": ["src/assets/jquery-3.4.1.min.js"]
           }
         },
         "lint": {

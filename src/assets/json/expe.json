@@ -1,0 +1,26 @@
+{
+    "experiencia": 
+[
+    {
+        "id":1,
+        "titulo":"string",
+        "estado":"finalizado",
+        "descripcion":"mi primer experiencia",
+        "imagen": "../assets/imagenes/logo-arg-programa.png",
+        "url":"string",
+        "institucion" : "string", 
+        "fk_persona":1
+    },
+    {
+        
+        "id":2,
+        "titulo":"string",
+        "estado":"finalizado",
+        "descripcion":"mi segunda experiencia",
+        "imagen": "../assets/imagenes/logo-arg-programa.png",
+        "url":"string",
+        "institucion" : "string", 
+        "fk_persona": 1
+    }
+]
+}

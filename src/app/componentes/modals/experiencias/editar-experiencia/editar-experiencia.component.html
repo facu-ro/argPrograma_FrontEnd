@@ -1,0 +1,73 @@
+
+<!--MODAL EXPERIENCIA-->
+
+<!-- Modal id="experiencia-editar"  [ngStyle]="{display:setEstado()}"-->
+<div  class="modal fade "  id="experiencia-editar"   tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">editar</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onCloseModal()"></button>
+        </div>
+        <div class="modal-body">
+  
+          <form [formGroup]="form"   name="experienciaForm"><!-- (ngSubmit)="enviar($event)" -->
+
+           <div class="mb-3">
+              <label for="descripcion_experiencia" class="form-label">id</label>
+              <input type="text"   formControlName="id_experiencia" >  <!-- [(ngModel)]="info.id"-->
+            </div>
+            <div class="mb-3">
+              <label for="descripcion_experiencia" class="form-label">experiencia</label>
+              <textarea formControlName="descripcion" class="form-control"  id="descripcion_experiencia" cols="30" rows="10" ></textarea>
+              
+            </div>
+            
+            <div class="mb-3">
+              <label for="imagen" class="form-label">imagen</label>
+              <input type="text" class="form-control" id="imagen" formControlName="imagen"  >
+            </div>
+
+            <div class="mb-3">
+              <label for="imagen" class="form-label">puesto</label>
+              <input type="text" class="form-control" id="puesto" formControlName="puesto"  >
+            </div>
+
+            <div class="mb-3">
+              <label for="imagen" class="form-label">inicio</label>
+              <input type="text" class="form-control" id="inicio" formControlName="inicio"  >
+            </div>
+            
+            
+            <div class="mb-3">
+              <label for="imagen" class="form-label">fin</label>
+              <input type="text" class="form-control" id="fin" formControlName="fin"  >
+            </div>
+
+            <div class="mb-3">
+              <label for="imagen" class="form-label">url</label>
+              <input type="text" class="form-control" id="url" formControlName="url"  >
+            </div>
+
+            <div class="mb-3">
+              <label for="imagen" class="form-label">empresa</label>
+              <input type="text" class="form-control" id="empresa" formControlName="empresa"  >
+            </div>
+
+            
+
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          
+          <button *ngIf="!bandera_boton" type="button" class="btn btn-primary" (click)="agregar($event)" >agregar</button> 
+          <button *ngIf="bandera_boton" type="button" class="btn btn-primary" (click)="editar($event)" >editar</button>      
+            <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCloseModal()">Close</button>
+
+         <!-- <button type="submit" class="btn btn-primary">Save changes</button>-->
+        </div>
+      </div>
+    </div>
+  </div>

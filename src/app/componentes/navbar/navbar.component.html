@@ -1,0 +1,45 @@
+<nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <img src="arg-programa.png" class=" logo img-fluid navbar-brand " alt="">
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item"  *ngIf="EstadoLogin==false" >
+              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#login"  >login <i class="fas fa-sign-in-alt"></i></a>
+            </li>
+            <li class="nav-item"  *ngIf="EstadoLogin==true" >
+              <a class="nav-link" (click)="logout()" >logout <i class="fas fa-sign-in-alt"></i></a>
+            </li>
+            <!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin" -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" >about me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" >experiencia</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Redes
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="#"><span class="fab fa-github"></span></a></li>
+                <li><a class="dropdown-item" href="#"><span class="fab fa-instagram"></span></a></li>
+                <li><a class="dropdown-item" href="#"><span class="fab fa-twitter"></span></a></li>
+              </ul>
+            </li>
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+ <app-modal-login></app-modal-login> 

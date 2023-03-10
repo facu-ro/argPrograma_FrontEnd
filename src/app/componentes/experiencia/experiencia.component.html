@@ -1,0 +1,85 @@
+<section id="experiencia">
+
+    <div style="margin:10px"> 
+      <h2 style="text-align: center;">experiencias</h2>
+      <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar" (click)="agregarExperiencia()" >
+        agregar<i class="far fa-plus-square"></i></button>
+    </div>
+   
+    <div class="container-fluid" style="margin-top:40px">
+  
+      <div class="row"   *ngFor="let i of (datosObservable$ | async) ; index as indice" >
+        <div class="col-4">
+
+          
+          <figure>  
+            <img src={{i.imagen}} alt="">
+          </figure>
+  
+        </div>
+        <div class="col-6">
+          <p>{{i.descripcion}}  {{indice}}</p>
+        </div>
+        <div *ngIf="EstadoLogin" class="col-1">
+         <button data-bs-toggle="modal" data-bs-target="#experiencia-editar"  #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button> 
+        </div> <!-- data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
+        <div *ngIf="EstadoLogin" class="col-1">
+         <button  (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button> 
+        </div>
+      </div>
+    
+  
+    </div>
+  
+  
+  </section>
+  
+
+  <app-agregar-experiencia ></app-agregar-experiencia>
+
+  
+  <app-editar-experiencia  ></app-editar-experiencia>
+
+  
+ <!--*ngIf="selectedItem" (closeModal)="setSelectedItem(null)"
+ MODAL EXPERIENCIA
+
+ <div class="modal fade" id="experiencia-editar"   tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">editar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+      <div class="modal-body">
+
+        <form [formGroup]="form"    name="experienciaForm">
+
+         <div class="mb-3">
+            <input type="text" formControlName="id"  >
+          </div>
+          <div class="mb-3">
+            <label for="text1" class="form-label">experiencia</label>
+            <textarea formControlName="descripcion" class="form-control"  id="text1"  cols="30" rows="10" ></textarea>
+            
+          </div>
+          
+          <div class="mb-3">
+            <label for="imagen" class="form-label">imagen</label>
+            <input type="text" class="form-control" id="imagen" formControlName="imagen"  >
+          </div>
+          <button type="submit" class="btn btnLogin">Agregar</button>      
+          <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+
+        </form>
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+    
+      </div>
+    </div>
+  </div>
+</div>
+-->
