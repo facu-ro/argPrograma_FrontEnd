@@ -24,9 +24,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css"/*,"src/assets/bootstrap/bootstrap.min.css"*/
             ],
-            "scripts": ["src/assets/jquery-3.4.1.min.js"]
+            "scripts": ["src/assets/jquery-3.4.1.min.js","src/assets/particles.min.js",/*"src/assets/bootstrap/bootstrap.min.js",*/"src/assets/particula.js","src/assets/miSwipper.js"]
           },
           "configurations": {
             "production": {

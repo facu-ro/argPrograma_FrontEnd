@@ -1,0 +1,63 @@
+
+
+
+<!--MODAL EXPERIENCIA-->
+
+<!-- Modal id="experiencia-editar"  [ngStyle]="{display:setEstado()}"-->
+<div  class="modal fade "  id="proyecto-editar"   tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">editar</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
+      </div>
+      <div class="modal-body">
+
+        <form [formGroup]="form"   name="proyecto_Form"><!-- (ngSubmit)="enviar($event)" -->
+
+         <div class="mb-3">
+            <label for="id_proyecto" class="form-label">id</label>
+            <input type="text"   formControlName="id_proyecto" >  <!-- [(ngModel)]="info.id"-->
+          </div>
+
+          <div class="mb-3">
+            <label for="titulo" class="form-label">titulo</label>
+            <input type="text" class="form-control" id="titulo" formControlName="titulo" >
+          </div>
+
+
+          <div class="mb-3">
+            <label for="descripcion_proyecto" class="form-label">descripcion</label>
+            <textarea formControlName="descripcion" class="form-control"  id="descripcion_proyecto" cols="30" rows="10" ></textarea>
+            
+          </div>
+          
+          <div class="mb-3">
+            <label for="imagen" class="form-label">imagen</label>
+            <input type="text" class="form-control" id="imagen" formControlName="imagen"  >
+          </div>
+
+
+          <div class="mb-3">
+            <label for="url" class="form-label">url</label>
+            <input type="text" class="form-control" id="url" formControlName="url"  >
+          </div>
+
+          
+          
+
+
+        </form>
+      </div>
+      <div class="modal-footer">
+        
+        <button *ngIf="!bandera_boton" type="button" class="btn btn-primary" (click)="agregar($event)" >agregar</button> 
+        <button *ngIf="bandera_boton" type="button" class="btn btn-primary" (click)="editar($event)" >editar</button>      
+          <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" >Close</button>
+
+       <!-- <button type="submit" class="btn btn-primary">Save changes</button>-->
+      </div>
+    </div>
+  </div>
+</div>

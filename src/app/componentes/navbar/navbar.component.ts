@@ -10,6 +10,8 @@ export class NavbarComponent implements OnInit {
 
   EstadoLogin:boolean
 
+  open:boolean=false
+
 
   constructor(private servicio_login:ServicioLoginService) { }
 
@@ -19,6 +21,23 @@ export class NavbarComponent implements OnInit {
 
         this.EstadoLogin=data
      })
+  }
+
+
+  openMenu(){
+
+
+    if(this.open==false){
+
+      this.open=true
+    }
+    
+   else if(this.open==true){
+
+    this.open=false
+   }
+    console.log(this.open)
+
   }
 
 

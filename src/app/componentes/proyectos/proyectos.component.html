@@ -1,0 +1,105 @@
+
+
+ <section id="proyectos">
+
+  <div style="margin:10px"> 
+    <h2 class="text-center">Proyectos</h2>
+    <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyecto-editar" (click)="agregarProyecto()" >
+      agregar<i class="far fa-plus-square"></i></button>
+  </div>
+
+
+
+
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      
+        <!-- Slides -->
+        <ul class="swiper-wrapper">
+
+          <li class="swiper-slide miSlide"  *ngFor="let i of datosProyectos ; index as indice">
+            
+            <div class="contenido-slide">
+
+              <div class="card">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+        
+                <div class="content">
+        
+                  <h2>{{i.titulo}}</h2>      
+                    <h3>Post title</h3>
+        
+                    
+                    <p class="text-center">{{i.descripcion}}</p>
+                    
+          
+                    <div class="botones "  >
+      
+                      <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
+                    <!--  *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" -->
+                    
+                      <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
+                    
+                    </div>
+
+                    <a [href]=i.url>ver github</a>
+                
+                </div>
+        
+               </div>
+
+            </div>
+            <!--<div class="contenido-slide">
+
+              <figure>
+                <img src="../assets/imagenes/descarga.jpg" alt="">
+              </figure>
+              
+              <div>
+                <h2>{{i.titulo}}</h2>
+              </div>
+              <div>
+                <p class="text-center">{{i.descripcion}}</p>
+              </div>
+    
+              <div class="botones "  >
+    
+                <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
+                *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" 
+              
+                <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
+              
+              </div>
+
+            </div>-->
+
+          </li> 
+
+         
+  
+        </ul>
+       
+      
+      <!-- If we need pagination  If we need navigation buttons  If we need scrollbar   -->
+      <div class="swiper-pagination"></div>
+    
+        
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    
+       
+      <div class="swiper-scrollbar"></div> 
+    </div>
+
+    
+
+    
+
+ </section>
+
+
+<app-editar-proyecto></app-editar-proyecto>

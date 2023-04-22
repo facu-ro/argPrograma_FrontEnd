@@ -12,6 +12,7 @@ import { EditarExperienciaComponent } from '../modals/experiencias/editar-experi
 
 declare var $:any
 
+
 @Component({
   selector: 'app-experiencia',
   templateUrl: './experiencia.component.html',
@@ -58,7 +59,7 @@ export class ExperienciaComponent implements OnInit {
       
     })
 
-    
+   
     
    
   }

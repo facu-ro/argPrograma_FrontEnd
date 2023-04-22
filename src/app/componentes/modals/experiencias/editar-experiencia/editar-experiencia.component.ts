@@ -87,17 +87,13 @@ export class EditarExperienciaComponent implements OnInit {
 
     event.preventDefault;
 
-    console.log(this.form.value)
+    console.log(this.form.getRawValue())
 
-   const  expeAgregar:Experiencia=this.form.value
-   
-    
+  
    if( this.form.controls['descripcion'].valid ){
 
-      console.log(expeAgregar)
-
-   
-      this.servicio_experiencia.agregar(this.form.value).subscribe(d=>{})
+      
+      this.servicio_experiencia.agregar(this.form.getRawValue()).subscribe(d=>{})
 
    }else{
       alert("falló en la carga, intente nuevamente");
@@ -113,12 +109,16 @@ export class EditarExperienciaComponent implements OnInit {
     
     event.preventDefault;
 
+    const  expeAgregar:Experiencia=this.form.getRawValue()
+
+    console.log(expeAgregar)
+
     if (this.form.valid){
 
     // this.actualizar();
     //console.log(this.form.value)
 
-      this.servicio_experiencia.editar(this.form.value).subscribe( data=>{
+      this.servicio_experiencia.editar(this.form.getRawValue() ).subscribe( data=>{
 
        //this.servicio_experiencia.getDatos().subscribe()
         console.log(data)

@@ -19,6 +19,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 import { ServicioLoginService } from './servicios/servicio-login.service';
+import { IndexComponent } from './componentes/index/index/index.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { ServicioProyectoService } from './servicios/servicio-proyecto.service';
+import { EditarProyectoComponent } from './componentes/modals/proyectos/editar-proyecto/editar-proyecto.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +35,12 @@ import { ServicioLoginService } from './servicios/servicio-login.service';
     AgregarExperienciaComponent,
     AboutmeEditarComponent,
     ExperienciaComponent,
-    ModalLoginComponent
+    ModalLoginComponent,
+    ProyectosComponent,
+
+    EditarProyectoComponent,
+
+    IndexComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +50,7 @@ import { ServicioLoginService } from './servicios/servicio-login.service';
     ReactiveFormsModule
   ],
  // entryComponents: [ EditarExperienciaComponent],
-  providers: [ServicioExperienciaService,ServicioLoginService],
+  providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,203 @@
+
+
+
+
+.caja{
+
+
+   height: 500px;
+
+   margin: auto;
+
+   overflow-y: scroll;
+   
+ 
+
+   scroll-snap-type: y mandatory;
+
+   box-shadow: 0 0 10px 1px #0000ff;
+
+ 
+}
+
+
+.caja .row .col{
+
+    scroll-snap-align: center;
+}
+
+
+
+.caja::-webkit-scrollbar{
+
+    width: .4rem;
+
+    height: .4rem;
+}
+
+.caja::-webkit-scrollbar-track{
+
+}
+
+
+.caja::-webkit-scrollbar-thumb{
+
+    background-color:#1462ce;
+    
+    border-radius: 25px;
+
+   
+}
+
+
+.caja::-webkit-scrollbar-thumb:hover{
+
+    
+
+    
+}
+
+
+.shadow{
+
+    
+}
+
+.shadow::before,.shadow::after{
+
+    content: "";
+
+    position: absolute;
+    top:-2px;
+    left: -2px;
+
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000);
+    background-size: 400%;
+
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+
+    border-radius: 5px;    
+
+    z-index: -1;
+
+    transition: 1s ease all;
+
+    animation: animate 20s linear infinite;
+}
+
+.shadow:hover::after{
+
+    filter: blur(20px);
+}
+
+@keyframes animate {
+    
+    0%{
+
+        background-position: 0%;
+    }
+
+    50%{
+
+        background-position: 300% 0;
+    }
+
+    100%{
+
+        background-position: 0 0;
+    }
+}
+
+
+/*---------------------------------------------------------------------*/
+
+/*
+#proyectos .caja{
+
+    width: 85%;
+    height: 400px;
+     
+    margin: auto;
+
+   overflow: hidden hidden;
+
+    scroll-snap-type: y mandatory;
+     
+    box-shadow: 0 0 10px 1px green;
+     
+      
+     
+}
+
+#proyectos .caja ul{
+
+    width: 100%;
+
+    list-style: none;
+
+    display: flex;
+
+    height: 100%;
+
+    overflow: scroll;
+
+    background-color: #ffff00;
+}
+
+#proyectos .caja ul li{
+
+    
+
+    background-color: #fb0094;
+}
+
+
+#proyectos ul li {
+
+    width: 100%;
+
+    margin: 10px;
+
+    background-color: forestgreen;
+    
+}
+
+#proyectos ul li figure{
+
+}
+
+#proyectos ul li p{
+
+}
+
+
+#proyectos ul li  div .botones{
+
+
+    
+}
+
+
+
+#proyectos .caja::-webkit-scrollbar{
+
+    width: .4rem;
+
+    height: .4rem;
+}
+
+
+
+
+
+#proyectos .caja::-webkit-scrollbar-thumb{
+
+    background-color:#1462ce;
+    
+    border-radius: 25px;
+
+   
+}
+
+*/

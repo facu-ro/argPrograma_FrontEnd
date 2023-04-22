@@ -18,22 +18,22 @@ import { ServicioLoginService } from './servicio-login.service';
 export class ServicioExperienciaService {
 
     
-    dato:any;
+   dato:any;
 
-    
+  private url:string='http://localhost:8080/api/experiencia/';
 
-   private obser= new Subject<Experiencia[]>();
+  private obser= new Subject<Experiencia[]>();
 
    //private estadoLogin=this.servicio_login.getEstadoLogin
 
     
-    constructor(private http:HttpClient, private servicio_login:ServicioLoginService) { 
+  constructor(private http:HttpClient, private servicio_login:ServicioLoginService) { 
 
       this.getDatos().subscribe()
 
          
     
-    }
+  }
 
 
  get getEstadoLogin():Observable<boolean>{
@@ -64,7 +64,7 @@ export class ServicioExperienciaService {
     //:Observable<Experiencia[]>
     getDatos():Observable<Experiencia[]> {
     
-      return  this.dato=this.http.get<Experiencia[]>('http://localhost:8080/experiencia/verExperiencias/')
+      return  this.http.get<Experiencia[]>(this.url + 'verExperiencias/')
         .pipe(
              tap( data=>{
                     
@@ -83,7 +83,7 @@ export class ServicioExperienciaService {
         this.dato=datos
         console.log(datos)
         
-       return  this.http.put<Experiencia>('http://localhost:8080/experiencia/editarExperencia',datos)
+       return  this.http.put<Experiencia>(this.url+'editarExperencia',datos)
 
             .pipe(
                 tap( data=>{
@@ -101,7 +101,7 @@ export class ServicioExperienciaService {
 
     agregar(dato:Experiencia):Observable<Experiencia>{
 
-       return  this.http.post<Experiencia>('http://localhost:8080/experiencia/nuevaExperencia-Persona/'+'5', dato)
+       return  this.http.post<Experiencia>(this.url+ 'nuevaExperencia-Presentacion/'+'1', dato)
        
             .pipe(
                     tap( data=>{
@@ -127,7 +127,7 @@ export class ServicioExperienciaService {
           };*/
 
           console.log(dato.id_experiencia)
-        return this.http.delete<any>('http://localhost:8080/experiencia/borrarExperiencia/'+ dato.id_experiencia)
+        return this.http.delete<any>(this.url+'borrarExperiencia/'+ dato.id_experiencia)
 
                 .pipe(
                     tap( data=>{

@@ -1,23 +1,15 @@
 export class Persona {
 
    private id_persona:number;
-   private nombre:string;
-   private apellido:string;
-   private foto:string;
-   private descripcion:string;
-   private banner:string;
+
    private email:string;
-   private curriculum:string;
+
    private  password:string;
 
-  constructor(email?:string, password?:string, nombre?:string, apellido?:string, foto?:string, descripcion?:string, banner?:string,  curriculum?:string){
-        this.nombre= nombre;
-        this.apellido= apellido;
-        this.foto= foto;
-        this.descripcion= descripcion;
-        this.banner= banner;
+  constructor(email?:string, password?:string){
+       
         this.email= email;
-        this.curriculum= curriculum;
+        
         this.password=password;
     }
 

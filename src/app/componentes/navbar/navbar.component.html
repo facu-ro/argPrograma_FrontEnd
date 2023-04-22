@@ -1,4 +1,28 @@
-<nav class="navbar navbar-dark bg-dark fixed-top">
+
+  <div class=" boton" >
+    <button class="navbar-toggler" type="button"  (click)="openMenu()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <!--[ngStyle]=" open ? {'opacity': '1'} : {'opacity': '0'} "-->
+    <nav > 
+
+        <ul >
+          <li [ngClass]="open ? 'list': 'noList' ">1</li>
+          <li [ngClass]="open ? 'list': 'noList' " >2</li>
+          <li [ngClass]="open ? 'list': 'noList' " >3</li>
+          <li [ngClass]="open ? 'list': 'noList' " >4</li>
+        </ul>
+      
+      </nav>
+
+  </div>
+
+
+
+<!--navbar-dark bg-dark
+<nav class="navbar  fixed-top">
     <div class="container-fluid">
       <img src="arg-programa.png" class=" logo img-fluid navbar-brand " alt="">
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
@@ -17,7 +41,7 @@
             <li class="nav-item"  *ngIf="EstadoLogin==true" >
               <a class="nav-link" (click)="logout()" >logout <i class="fas fa-sign-in-alt"></i></a>
             </li>
-            <!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin" -->
+
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" >about me</a>
             </li>
@@ -40,6 +64,7 @@
       </div>
     </div>
   </nav>
-
+-->
+            <!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin" -->
 
  <app-modal-login></app-modal-login> 

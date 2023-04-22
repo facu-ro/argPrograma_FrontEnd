@@ -1,54 +1,249 @@
-#aboutme {
+#sobre_mi {
     margin: auto;
-    padding: 150px 30px;
+   /* padding: 150px 30px;
     color: #111135; /* #111135;*/
-    display: flex;
-    justify-content: center;
-    background: #B0C4DE;
+    text-align: center;
+
   }
-#aboutme .container-photo {
-    width: 50%;
-    margin-right: 80px;
+
+
+  /*background-image:url('src/assets/imagenes/descarga.jpg');*/
+
+.saludo{
+
+  background-color: #23d5ab;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background-image: url("src/assets/imagenes/descarga.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+}  
+
+.saludo>p:nth-child(2){
+  font-size: 2em;
+
+  font-weight: bold;
+
+  letter-spacing: 1em;
+}
+
+.saludo>p:nth-child(3){
+  font-size: 1.2em;
+
+  font-weight: bold;
+
+  letter-spacing: 0.4em;
+
+  line-height: 2em;
+
+}
+
+
+.presentacion{
+  
+  background-color: #B0C4DE;
+
+  background:linear-gradient(45deg,#e66465,#23d5ab);
+  background-size: 500% 500%;
+
+  animation: color 1s ease-in-out infinite ;
+  transition: 0.5s all;
+  
+  padding: 1em; 
+
+
+}
+
+.presentacion figure{
+
+  width:80%;
+  margin: auto ;
+}
+
+.presentacion figure img{
+  
+  max-width: 100%;
+
+  height: auto;
+  
+  float: left;
+
+  border: solid 10px blue;
+
+  border-radius: 5%;
+}
+
+
+
+
+
+@keyframes color{
+
+  0%{
+    background-position: 0% 50%;
+  }
+  50%{
+    background-position: 100% 50%;
+  }
+  100%{
+    background-position: 50% 100%;
+  }
+ 
+}
+
+
+
+@media (max-width: 767px){
+
+  .saludo>p:nth-child(1){
+  
+    color: antiquewhite;
+
+    letter-spacing: .3rem;
+
   
   }
-#aboutme .container-photo img{
+  
+  .saludo>p:nth-child(2){
+  
+  color: antiquewhite;
+
+    letter-spacing: 0.2em;
+
+    line-height: 2em;
+  }
+
+  .presentacion figure{
+
+    width: 100%;
+
+  }
+
+  .presentacion figure img{
+
+    display: block;
+    margin: auto;
+    float: none;
+  }
+}
+
+  /*
+
+.fig-img{
+  margin: auto;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  box-sizing: border-box;
+
+  position: relative;  
+
+}
+
+figure{
+
+  background-color: fuchsia;
+  margin: auto;
+
+}
+
+figure::before{
+
+  content: '';
+  position: absolute;
+ 
+  background-color: blue;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 23.5%;
+  height: 104%;
+
+  z-index: -1;
+ 
+  
+}
+
+figure::after{
+
+  content: '';
+  position: absolute;
+ 
+  background-color: blue;
+  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 25%;
+  height: 104%;
+
+  z-index: -2;
+  
+  filter: blur(20px);
+}
+
+figure::after,
+figure::before{
+  
+  background:linear-gradient(#e66465,#9198e5,#23d5ab);
+  background-size: 400% 400%;
+
+  animation: color 1s ease infinite ;
+  transition: .5s all;
+
+  
+}
+
+
+ img{
+   background-color:plum #F3F3F3;  plum #F3F3F3 
+
+  }
+
+
+
+
+  @keyframes color{
    
-   max-width: 100%;
-   height: auto;
-    border-radius: 20px 0 20px 0;
-    background-color:plum #F3F3F3; /* plum #F3F3F3 */
+    0%{
+      background-position: 0% 50%;
+    }
+    50%{
+      background-position: 100% 50%;
+    }
+    100%{
+      background-position: 100% 50%;
+    }
+
+
+    0%{
+    background-position: 0% 0%;
   }
-  
-#aboutme .aboutme {
-    margin: 0 40px;
-    width: 50%;
+  25%{
+    background-position: 100% 100%;
   }
-  
-#aboutme .aboutme .titles-section {
-    font-size: 22px;
-    text-transform: uppercase;
-    color: #111135;
-    text-decoration: underline;
-    text-decoration-color: #d3d3d3;
-    text-decoration-thickness: 5px;
+  50%{
+    background-position: 200% 200%;
+    
   }
-  
-#aboutme .aboutme h2 {
-    font-size: 34px;
-    font-weight: bold;
-    margin: 20px 0;
-    letter-spacing: 2px;
+  100%{
+    background-position: 0% 0%;
   }
-#aboutme .aboutme h2 span {
-    color: blueviolet; /* #ff5080; */
   }
-  
-  
-  
-#aboutme .aboutme p {
-    font-size: 19px;
-    line-height: 28px;
-    color: #565656; /* #565656;*/
-    margin-bottom: 12px;
+
+
+ 
+
+  .fondo{
+    background-color: brown;
   }
-  
+*/
+ 

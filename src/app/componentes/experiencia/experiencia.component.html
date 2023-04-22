@@ -2,38 +2,48 @@
 
     <div style="margin:10px"> 
       <h2 style="text-align: center;">experiencias</h2>
-      <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar" (click)="agregarExperiencia()" >
+      <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar" (click)="agregarExperiencia()" >
         agregar<i class="far fa-plus-square"></i></button>
     </div>
    
-    <div class="container-fluid" style="margin-top:40px">
+    <div class="container caja"   >
   
-      <div class="row"   *ngFor="let i of (datosObservable$ | async) ; index as indice" >
-        <div class="col-4">
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="margin:10px;" >
+        <div class="col" style="margin-bottom:10px; margin-top:10px;"  *ngFor="let i of (datosObservable$ | async) ; index as indice">
 
+          <div class="card text-center h-100 shadow" >
+             
+            <img class="card-img-top" src="../assets/imagenes/descarga.jpg" alt="">
           
-          <figure>  
-            <img src={{i.imagen}} alt="">
-          </figure>
-  
+            <div class="card-body ">
+
+              <div >
+                <p class="card-text">{{i.descripcion}}  {{indice}}</p>
+              </div>
+
+            </div>
+            
+            <div class="botones card-footer"  >
+
+              <button data-bs-toggle="modal" data-bs-target="#experiencia-editar"  #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button> 
+               <!--*ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
+             
+              <button  (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button> 
+             
+            </div>
+
+          </div>
+
         </div>
-        <div class="col-6">
-          <p>{{i.descripcion}}  {{indice}}</p>
-        </div>
-        <div *ngIf="EstadoLogin" class="col-1">
-         <button data-bs-toggle="modal" data-bs-target="#experiencia-editar"  #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button> 
-        </div> <!-- data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
-        <div *ngIf="EstadoLogin" class="col-1">
-         <button  (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button> 
-        </div>
-      </div>
-    
+
+      </div> 
   
     </div>
   
-  
   </section>
   
+
+ 
 
   <app-agregar-experiencia ></app-agregar-experiencia>
 
@@ -42,8 +52,8 @@
 
   
  <!--*ngIf="selectedItem" (closeModal)="setSelectedItem(null)"
- MODAL EXPERIENCIA
-
+ MODAL EXPERIENCIA   style="background-color: blueviolet;"
+ 
  <div class="modal fade" id="experiencia-editar"   tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
   <div class="modal-dialog">
     <div class="modal-content">
