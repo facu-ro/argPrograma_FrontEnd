@@ -23,6 +23,9 @@ import { IndexComponent } from './componentes/index/index/index.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { ServicioProyectoService } from './servicios/servicio-proyecto.service';
 import { EditarProyectoComponent } from './componentes/modals/proyectos/editar-proyecto/editar-proyecto.component';
+import { HabilidadComponent } from './componentes/habilidad/habilidad.component';
+import { EditarHabilidadComponent } from './componentes/modals/habilidad/editar-habilidad/editar-habilidad.component';
+import { ServicioHabilidadService } from './servicios/servicio-habilidad.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,8 @@ import { EditarProyectoComponent } from './componentes/modals/proyectos/editar-p
     ProyectosComponent,
 
     EditarProyectoComponent,
-
+    HabilidadComponent,
+    EditarHabilidadComponent,
     IndexComponent
   ],
   imports: [
@@ -50,7 +54,7 @@ import { EditarProyectoComponent } from './componentes/modals/proyectos/editar-p
     ReactiveFormsModule
   ],
  // entryComponents: [ EditarExperienciaComponent],
-  providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService],
+  providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService, ServicioHabilidadService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
