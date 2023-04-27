@@ -1,10 +1,34 @@
 
+function miGrilla(){
+  
+  $('.expansion-grid').expansionGrid({
+    position: true,
+    positionOffset: -6
+  });
+}
+
+function gridSwiper(){
+
+  const swiper = new Swiper(".grid", {
+    slidesPerView: 3,
+    effect:"grid",
+    gridEffect: {
+      rows: 3,
+    },
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-paginacion",
+      clickable: true,
+    },
+  });
+}
+
 
 function iniciarSwipper(){
 
 //keyboard="true" space-between="30"  pagination-clickable="true"
 
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper(".miSwiper", {
         // Optional parameters
        // direction: 'horizontal',
 
@@ -87,4 +111,6 @@ function iniciarSwipper(){
 
 
 }
+
+
 

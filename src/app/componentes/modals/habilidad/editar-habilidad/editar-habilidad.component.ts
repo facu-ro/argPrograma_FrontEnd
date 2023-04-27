@@ -22,7 +22,7 @@ export class EditarHabilidadComponent implements OnInit {
     this.form=this.formBuilder.group({
 
       id_habilidad:['', [Validators.required]],
-      descripcion:['',[Validators.required]],
+      descripcion_habilidad:['',[Validators.required]],
       porcentaje:['',[Validators.required]],
       imagen:['']
 
@@ -47,8 +47,8 @@ export class EditarHabilidadComponent implements OnInit {
 
     console.log(this.form.getRawValue())
 
-  
-   if( this.form.controls['descripcion'].valid ){
+  //this.form.controls['descripcion'].valid
+   if( this.form.valid ){
 
       
       this.servicio_habilidad.agregar(this.form.getRawValue())

@@ -1,4 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+declare function particula(a?:any,b?:any)
+
+declare var particlesJS: any;
+
 
 @Component({
   selector: 'app-root',
@@ -8,11 +13,16 @@ import { Component } from '@angular/core';
 
 
 
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'arg-programa';
 
 
+  ngOnInit(){
+
+    //particula()
  
+ 
+  }
 }
 
 

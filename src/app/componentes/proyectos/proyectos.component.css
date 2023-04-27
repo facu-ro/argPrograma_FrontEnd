@@ -1,4 +1,16 @@
 
+#proyectos{
+    width: 80%;
+    height: auto;  
+    overflow: hidden;
+    margin:auto;
+    
+}
+
+
+i{
+    color:black
+}
 
 .swiper {
     width: 80%;
@@ -8,7 +20,7 @@
 }
 
 
-.swiper-slide{
+.miSlide{
 
     
     position: relative;
@@ -34,12 +46,12 @@
     transform: translate(-50%,-50%);
 }
 
-.swiper-slide>.contenido-slide>figure{
+.miSlide>.contenido-slide>figure{
 
     background-color: blueviolet;
 }
 
-.swiper-slide>.contenido-slide>figure img{
+.miSlide>.contenido-slide>figure img{
 
     display: block;
    margin: auto;
@@ -269,7 +281,7 @@
         width: 100%;
     }
     
-    .swiper-slide{
+    .miSlide{
 
         width: 70%;
         margin: auto;

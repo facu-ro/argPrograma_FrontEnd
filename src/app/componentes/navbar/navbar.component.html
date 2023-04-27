@@ -1,70 +1,66 @@
+<nav class="boton">
 
-  <div class=" boton" >
-    <button class="navbar-toggler" type="button"  (click)="openMenu()">
+  <button class="icono btn btn-info" type="button" (click)="openMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+
+
+  <ul [ngStyle]=" open ? {'background-color': 'rgb(0, 255, 255,0.1)'} : {'background-color': 'transparent'}">
+    <li *ngIf="!EstadoLogin" class="btn btn-primary " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
+      data-bs-target="#login">Login <i class="fas fa-sign-in-alt"></i></li>
+
+
+    <li *ngIf="EstadoLogin" class="btn btn-danger" [ngClass]="open ? 'list': 'noList' ">
+      <span (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
+    </li>
+
+    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-github"></span></a></li>
+    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-instagram"></span></a></li>
+    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-twitter"></span></a></li>
+
+  </ul>
+
+
+
+</nav>
+
+
+
+<!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin"
+
+fixed-top sticky-top -->
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+ 
+  <div class="container-fluid  ">
+    
+    <a class="navbar-brand " href="#"><img class="logo" src="./assets/imagenes/logo-arg-programa.png" alt=""></a>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openMenu()">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-
-    <!--[ngStyle]=" open ? {'opacity': '1'} : {'opacity': '0'} "-->
-    <nav > 
-
-        <ul >
-          <li [ngClass]="open ? 'list': 'noList' ">1</li>
-          <li [ngClass]="open ? 'list': 'noList' " >2</li>
-          <li [ngClass]="open ? 'list': 'noList' " >3</li>
-          <li [ngClass]="open ? 'list': 'noList' " >4</li>
-        </ul>
-      
-      </nav>
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li *ngIf="!EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
+        data-bs-target="#login"><span class=" btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></span></li>
+  
+  
+      <li *ngIf="EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' ">
+        <span class="btn btn-danger" (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
+      </li>
+  
+      <li class="nav-item icono"><a href="#"><span class="fab fa-github"></span></a></li>
+      <li class="nav-item icono" ><a href="#"><span class="fab fa-instagram"></span></a></li>
+      <li class="nav-item icono" ><a href="#"><span class="fab fa-twitter"></span></a></li>
+  
+      </ul>  
+    </div>
 
   </div>
 
+</nav>
 
-
-<!--navbar-dark bg-dark
-<nav class="navbar  fixed-top">
-    <div class="container-fluid">
-      <img src="arg-programa.png" class=" logo img-fluid navbar-brand " alt="">
-      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item"  *ngIf="EstadoLogin==false" >
-              <a class="nav-link" data-bs-toggle="modal" data-bs-target="#login"  >login <i class="fas fa-sign-in-alt"></i></a>
-            </li>
-            <li class="nav-item"  *ngIf="EstadoLogin==true" >
-              <a class="nav-link" (click)="logout()" >logout <i class="fas fa-sign-in-alt"></i></a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" >about me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" >experiencia</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Redes
-              </a>
-              <ul class="dropdown-menu dropdown-menu-dark">
-                <li><a class="dropdown-item" href="#"><span class="fab fa-github"></span></a></li>
-                <li><a class="dropdown-item" href="#"><span class="fab fa-instagram"></span></a></li>
-                <li><a class="dropdown-item" href="#"><span class="fab fa-twitter"></span></a></li>
-              </ul>
-            </li>
-          </ul>
-          
-        </div>
-      </div>
-    </div>
-  </nav>
--->
-            <!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin" -->
-
- <app-modal-login></app-modal-login> 
+<app-modal-login></app-modal-login>

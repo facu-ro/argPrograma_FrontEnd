@@ -2,16 +2,16 @@
 
  <section id="proyectos">
 
-  <div style="margin:10px"> 
+  <div  style="margin-top:40px"> 
     <h2 class="text-center">Proyectos</h2>
-    <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyecto-editar" (click)="agregarProyecto()" >
+    <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyecto-editar" (click)="agregarProyecto()" >
       agregar<i class="far fa-plus-square"></i></button>
   </div>
 
 
 
 
-    <div class="swiper">
+    <div class="miSwiper">
       <!-- Additional required wrapper -->
       
         <!-- Slides -->
@@ -37,16 +37,16 @@
                     <p class="text-center">{{i.descripcion}}</p>
                     
           
-                    <div class="botones "  >
+                    <div *ngIf="EstadoLogin" class="botones "  >
       
                       <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
-                    <!--  *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" -->
+                     <!--  *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" -->
                     
                       <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
                     
                     </div>
 
-                    <a [href]=i.url>ver github</a>
+                    <a href="{{i.url}}" target="_blank">ver github</a>
                 
                 </div>
         

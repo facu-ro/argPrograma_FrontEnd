@@ -6,7 +6,7 @@ export class Persona {
 
    private  password:string;
 
-  constructor(email?:string, password?:string){
+  constructor(email:string, password:string){
        
         this.email= email;
         

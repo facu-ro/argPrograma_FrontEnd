@@ -26,15 +26,17 @@ export class ModalLoginComponent implements OnInit {
      });
 
 
-     this.servicio_login.getEstadoLogin.subscribe(data=>{
-
-      console.log(data)
-        this.EstadoLogin=data
-     })
+    
 
    }
 
   ngOnInit(): void {
+
+    this.servicio_login.getEstadoLogin.subscribe(data=>{
+
+      console.log(data)
+        this.EstadoLogin=data
+     })
   }
 
   //hola

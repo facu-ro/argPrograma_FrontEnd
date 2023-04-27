@@ -14,23 +14,23 @@
         <form [formGroup]="form"   name="habilidadForm"><!-- (ngSubmit)="enviar($event)" -->
 
          <div class="mb-3">
-            <label for="id_habilidad" class="form-label">id</label>
+            <label for="" class="form-label">id</label>
             <input type="text"   formControlName="id_habilidad" >  <!-- [(ngModel)]="info.id"-->
           </div>
           <div class="mb-3">
             <label for="descripcion_habilidad" class="form-label">habilidad</label>
-            <textarea formControlName="descripcion" class="form-control"  id="descripcion_habilidad" cols="30" rows="10" ></textarea>
+            <textarea formControlName="descripcion_habilidad" class="form-control"  id="descripcion_habilidad" cols="30" rows="10" ></textarea>
             
           </div>
           
           <div class="mb-3">
             <label for="porcentaje" class="form-label">porcentaje</label>
-            <input type="number" class="form-control" id="porcentaje" formControlName="porcentaje"  >
+            <input type="text" class="form-control" id="porcentaje" formControlName="porcentaje"  >
           </div>
 
           <div class="mb-3">
-            <label for="imagen" class="form-label">porcentaje</label>
-            <input type="text" class="form-control" id="imagen" formControlName="imagen"  >
+            <label for="imagen_habilidad" class="form-label">imagen</label>
+            <input type="text" class="form-control" id="imagen_habilidad" formControlName="imagen"  >
           </div>
           
          

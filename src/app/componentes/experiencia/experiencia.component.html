@@ -1,95 +1,70 @@
+
+ 
 <section id="experiencia">
 
-    <div style="margin:10px"> 
-      <h2 style="text-align: center;">experiencias</h2>
-      <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar" (click)="agregarExperiencia()" >
-        agregar<i class="far fa-plus-square"></i></button>
-    </div>
-   
-    <div class="container caja"   >
-  
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="margin:10px;" >
-        <div class="col" style="margin-bottom:10px; margin-top:10px;"  *ngFor="let i of (datosObservable$ | async) ; index as indice">
+  <div style="">
+    <h2 style="text-align: center; padding:50px">experiencias</h2>
+    <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar"
+      (click)="agregarExperiencia()">
+      agregar<i class="far fa-plus-square"></i></button>
+  </div>
 
-          <div class="card text-center h-100 shadow" >
-             
+  <!--*ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
+
+  <div class="container caja">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="margin:10px;">
+
+      <div class=" col" style="margin-bottom:10px; margin-top:10px;" *ngFor="let i of (datosObservable$ | async) ; index as indice">
+
+        <div class="card text-center h-100 shadow">
+
+          <div class="contenido caja-card">
+
             <img class="card-img-top" src="../assets/imagenes/descarga.jpg" alt="">
-          
+
             <div class="card-body ">
 
-              <div >
-                <p class="card-text">{{i.descripcion}}  {{indice}}</p>
-              </div>
+              <h2 style=" color:black">{{i.empresa}}</h2>
+              <h3 style=" color:black">{{i.puesto}}</h3>
 
             </div>
-            
-            <div class="botones card-footer"  >
+          
+           <!--*ngIf="EstadoLogin" card-footer [ngStyle]="EstadoLogin ? {'display':'none'}: {'display':'block'}" -->
+          
+          </div>
 
-              <button data-bs-toggle="modal" data-bs-target="#experiencia-editar"  #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button> 
-               <!--*ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
-             
-              <button  (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button> 
-             
-            </div>
+          <div class="card-text caja-descripcion">
+            <p class="">{{i.descripcion}} {{indice}}</p>
+          </div>
 
+          <div *ngIf="EstadoLogin" class="botones ">
+            <button data-bs-toggle="modal" data-bs-target="#experiencia-editar" #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button>
+            <button (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button>
           </div>
 
         </div>
 
-      </div> 
-  
+      </div>
+
+
     </div>
-  
-  </section>
-  
 
- 
-
-  <app-agregar-experiencia ></app-agregar-experiencia>
-
-  
-  <app-editar-experiencia  ></app-editar-experiencia>
-
-  
- <!--*ngIf="selectedItem" (closeModal)="setSelectedItem(null)"
- MODAL EXPERIENCIA   style="background-color: blueviolet;"
- 
- <div class="modal fade" id="experiencia-editar"   tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">editar</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" ></button>
-      </div>
-      <div class="modal-body">
-
-        <form [formGroup]="form"    name="experienciaForm">
-
-         <div class="mb-3">
-            <input type="text" formControlName="id"  >
-          </div>
-          <div class="mb-3">
-            <label for="text1" class="form-label">experiencia</label>
-            <textarea formControlName="descripcion" class="form-control"  id="text1"  cols="30" rows="10" ></textarea>
-            
-          </div>
-          
-          <div class="mb-3">
-            <label for="imagen" class="form-label">imagen</label>
-            <input type="text" class="form-control" id="imagen" formControlName="imagen"  >
-          </div>
-          <button type="submit" class="btn btnLogin">Agregar</button>      
-          <button type="button" class="btn btn-ligth" (click)="limpiar()">Limpiar</button>
-
-        </form>
-        
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Save changes</button>
-    
-      </div>
-    </div>
   </div>
-</div>
--->
+
+
+
+
+
+</section>
+
+
+
+
+
+<app-agregar-experiencia></app-agregar-experiencia>
+
+
+<app-editar-experiencia></app-editar-experiencia>
+
+

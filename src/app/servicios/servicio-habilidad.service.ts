@@ -52,7 +52,7 @@ export class ServicioHabilidadService {
    //:Observable<Habilidad[]>
    getDatos() {
     
-         this.http.get<Habilidad[]>(this.url + 'verHabilidades/').subscribe(data=>{
+         this.http.get<Habilidad[]>(this.url + 'verHabilidades').subscribe(data=>{
 
             this.datosHabilidad=data;
             this.setObser( this.datosHabilidad);
@@ -80,7 +80,7 @@ export class ServicioHabilidadService {
 
         console.log(datos.id_habilidad)
 
-       this.http.put<Habilidad>(this.url+'editarHabilidad/',datos).subscribe(data=>{
+       this.http.put<Habilidad>(this.url+'editarHabilidad',datos).subscribe(data=>{
 
             const indice= this.datosHabilidad.findIndex(i => datos.id_habilidad == i.id_habilidad)
 

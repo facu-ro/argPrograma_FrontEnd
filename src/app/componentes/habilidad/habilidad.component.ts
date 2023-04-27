@@ -27,21 +27,40 @@ export class HabilidadComponent implements OnInit {
       this.EstadoLogin=data;
     })
 
+
+    this.servicio_habilidad.getObser.subscribe(data=>{
+
+      this.datosHabilidad=data;
+
+      for (let i of this.datosHabilidad){
+        
+        console.log("la descripcion es "+i.descripcion_habilidad)
+        console.log("el porcentaje es "+i.porcentaje)
+      }
+
+      
+
+    })
+
   }
 
 
-  Itemhabilidad(item) {
+  ItemHabilidad(item:Habilidad) {
     
     
     this.compEditar.bandera_boton=true
  
-    
+    console.log("la descripcion es "+item.descripcion_habilidad)
+
      this.compEditar.form.setValue({
-       descripcion:item.descripcion,
-       id_habilidad:item.id_habilidad,
-       imagen:item.imagen,
         
-       porcentaje:item.porcentaje
+       id_habilidad:item.id_habilidad,
+
+       descripcion_habilidad:item.descripcion_habilidad,
+
+       porcentaje:item.porcentaje,
+       imagen:item.imagen
+        
        })
      
      
@@ -52,8 +71,9 @@ export class HabilidadComponent implements OnInit {
    agregarHabilidad(){
  
        this.compEditar.bandera_boton=false
+       
        this.compEditar.form.setValue({
-         descripcion:"",
+         descripcion_habilidad:"",
          id_habilidad:"",
          imagen:"",
          porcentaje:""            
@@ -76,7 +96,7 @@ export class HabilidadComponent implements OnInit {
    }
  
  
-   borrarhabilidad(habilidad:Habilidad){
+   borrarHabilidad(habilidad:Habilidad){
  
      this.servicio_habilidad.borrar(habilidad)
  

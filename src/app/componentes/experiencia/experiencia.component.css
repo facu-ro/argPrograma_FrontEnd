@@ -1,6 +1,21 @@
 
 
+#experencia{
 
+    width: 80%;
+    margin: auto;
+
+}
+
+.botones{
+
+    position: absolute;
+    bottom:5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+
+}
 
 .caja{
 
@@ -23,6 +38,7 @@
 
 .caja .row .col{
 
+    
     scroll-snap-align: center;
 }
 
@@ -110,94 +126,74 @@
 }
 
 
-/*---------------------------------------------------------------------*/
 
-/*
-#proyectos .caja{
+.caja-card{
 
-    width: 85%;
-    height: 400px;
-     
-    margin: auto;
+    overflow: hidden;
+    position: relative;
 
-   overflow: hidden hidden;
-
-    scroll-snap-type: y mandatory;
-     
-    box-shadow: 0 0 10px 1px green;
-     
-      
-     
 }
 
-#proyectos .caja ul{
+.caja-descripcion{
 
+    
     width: 100%;
 
-    list-style: none;
+    
+    position: absolute;
 
-    display: flex;
-
+    
+    opacity: 0;
     height: 100%;
 
-    overflow: scroll;
+    transition: all .5s;
 
-    background-color: #ffff00;
-}
+    overflow-y: scroll;
 
-#proyectos .caja ul li{
+    transform: translateY(100%);
 
+    font-size: 1rem;
+    color: aliceblue;
+    font-weight: bolder;
     
-
-    background-color: #fb0094;
+/*rgb(220, 30, 141, 0.4)*/
+    background-color: rgba(98, 22, 197, 0.6);
 }
 
+.card:hover .caja-descripcion{
 
-#proyectos ul li {
-
-    width: 100%;
-
-    margin: 10px;
-
-    background-color: forestgreen;
-    
-}
-
-#proyectos ul li figure{
-
-}
-
-#proyectos ul li p{
-
-}
-
-
-#proyectos ul li  div .botones{
-
+    transform: translateY(0%);
+    opacity: 1;
+    transition: all .5s;
 
     
 }
 
 
 
-#proyectos .caja::-webkit-scrollbar{
+
+.caja-descripcion::-webkit-scrollbar{
 
     width: .4rem;
 
     height: .4rem;
 }
 
+.caja-descripcion::-webkit-scrollbar-track{
+
+}
 
 
+.caja-descripcion::-webkit-scrollbar-thumb{
 
-
-#proyectos .caja::-webkit-scrollbar-thumb{
-
-    background-color:#1462ce;
+    background-color:rgb(220, 30, 141);
     
     border-radius: 25px;
 
    
 }
 
-*/
+
+i{
+    color:black
+}

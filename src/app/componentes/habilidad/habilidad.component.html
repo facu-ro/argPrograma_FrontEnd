@@ -1,11 +1,35 @@
 
-<section id="id_habilidad">
+<section id="seccion_habilidad" >
 
-  <div style="margin:10px"> 
+  <div  style="margin:10px"> 
     <h2 class="text-center">Habilidad</h2>
-    <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#habilidad_editar" (click)="agregarHabilidad()" >
+    <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#habilidad_editar" (click)="agregarHabilidad()" >
       agregar<i class="far fa-plus-square"></i></button>
   </div>
+
+
+  <div  *ngFor="let i of datosHabilidad">
+      
+    <div class="habilidades">
+
+        <!-- mt- margin-top -->
+        <div  class="progress mt-2" role="progressbar" aria-label="Success example" aria-valuenow={{i.porcentaje}} aria-valuemin="0" aria-valuemax="100" >
+          
+          <div class="progress-bar bg-info overflow-visible" [style]="{'width': i.porcentaje + '%', 'color':'green', 'font-size':'0.8rem', 'font-weight':'bold'  }">{{i.porcentaje + '%' }} {{i.descripcion_habilidad}} </div>
+
+        </div>
+
+        <div *ngIf="EstadoLogin" class="botones "  >
+          
+          <button data-bs-toggle="modal" data-bs-target="#habilidad_editar"  #boton (click)="ItemHabilidad(i)"><i class="fas fa-edit"></i> </button>       
+          <button  (click)="borrarHabilidad(i)"><i class="fas fa-trash-alt"></i></button> 
+        
+        </div>
+    
+    </div>  
+ 
+  </div>
+  
 
 
 

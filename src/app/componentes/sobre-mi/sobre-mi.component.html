@@ -1,70 +1,40 @@
+
 <section id="sobre_mi" >
     
-  <div class="saludo" style="height: 100vh;">
+  <div class="saludo" >
 
-  
-    <div class="boton-editar" style="width: 10%;height:40px;" >
-      <button type="button" class="btn" style="width: 30px;height:40px;background-color:green;" data-bs-toggle="modal" data-bs-target="#sobremi">
-        <i class="fas fa-edit"></i>
+ 
+
+     <!--<source src="assets/imagenes/nebulosa2.mp4" type="video/mp4" />--> 
+
+    <div class="hola">
+
+      <h2> Mi nombre es Facundo<br>  Bienvenidos a mi portfolio. </h2>
+
+    </div>
+
+       <!--*ngIf="EstadoLogin" style="width: 30px;height:40px;background-color:green;"-->
+    <div *ngIf="EstadoLogin" class="boton-editar" style="width: 10%;height:40px;" >
+      <button type="button" class="btn"  data-bs-toggle="modal" data-bs-target="#sobremi" (click)="ItemPresentacion(sobre_mi)">
+          <i class="fas fa-edit"></i>
       </button>
     </div>
 
-    <p >VALHAR MORGULIS</p>
-
-    <p>Bienvenidos a mi portfolio. <br> Mi nombre es Facundo Rodriguez, soy  </p>
-
-  </div>
-
-  <div class="presentacion" >
+    <div class="descripcion">
     
-    <figure>
-      <img  src="../assets/imagenes/descarga.jpg" alt="foto de Facu"/>
-      <p >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, natus deleniti. Enim ratione nam aliquam error beatae nesciunt corrupti velit distinctio natus consequuntur quae impedit ad ipsam culpa doloribus sit voluptates, recusandae quod perferendis rem ducimus. Sed suscipit quia modi illo autem nemo pariatur quaerat nulla porro? Dolor quam vitae est saepe, impedit labore ullam laboriosam autem, nobis doloribus animi?
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus odit exercitationem dolor! Eius nisi ratione earum labore quidem eligendi fugiat doloremque perspiciatis pariatur quos quo quod alias est necessitatibus eos voluptates, excepturi dolores aliquam. Enim ducimus harum optio excepturi magni, voluptates sunt, cum assumenda, inventore laudantium culpa? Assumenda, corporis dolore?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima odit quisquam dolorem! Placeat hic dolorem, odio illum sint aspernatur voluptates. Dolorem corrupti obcaecati nisi quia iure assumenda laudantium perspiciatis ex! Consectetur illum odio, reprehenderit laboriosam quam blanditiis sed, fugit tenetur illo minima provident dolor eligendi animi optio! Odio, unde vero.</p>
-    </figure>
+      <figure>
+        <img  src="../assets/imagenes/descarga.jpg" alt="foto de Facu"/>
+        <p >
+          {{sobre_mi.descripcion }}
+        </p>
+      </figure>
+  
+    </div>
 
   </div>
 
-    <!--<div class="container-fluid fondo">
-      <div class="row">
+  
 
-        <div class="boton-editar" style="width: 10%;height:40px;" >
-          <button type="button" class="btn" style="width: 30px;height:40px;background-color:green;" data-bs-toggle="modal" data-bs-target="#sobremi">
-            <i class="fas fa-edit"></i>
-          </button>
-        </div>
-
-        <div class="col-12 col-md-12 " >
-         
-          
-            <div class="fig-img">
-              <figure  >
-                <img src="../assets/imagenes/descarga.jpg" alt="foto de Facu"/>
-              
-              </figure>
-              
-            </div>
-          
-
-          <div class="aboutme " >
-            
-            <h2 style="background-color: green" >I'm <span>Full Stack Developer Jr</span></h2>
-            
-            <p class="title-section">About me</p>
-            <p>
-              {{sobre_mi}}
-            </p>
-            
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    -->
-   
 </section>
 
 

@@ -26,6 +26,7 @@ import { EditarProyectoComponent } from './componentes/modals/proyectos/editar-p
 import { HabilidadComponent } from './componentes/habilidad/habilidad.component';
 import { EditarHabilidadComponent } from './componentes/modals/habilidad/editar-habilidad/editar-habilidad.component';
 import { ServicioHabilidadService } from './servicios/servicio-habilidad.service';
+import { ServicioPresentacionService } from './servicios/servicio-presentacion';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import { ServicioHabilidadService } from './servicios/servicio-habilidad.service
     ReactiveFormsModule
   ],
  // entryComponents: [ EditarExperienciaComponent],
-  providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService, ServicioHabilidadService],
+  providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService, ServicioHabilidadService, ServicioPresentacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

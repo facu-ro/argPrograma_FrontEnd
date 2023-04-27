@@ -12,6 +12,11 @@ import { EditarExperienciaComponent } from '../modals/experiencias/editar-experi
 
 declare var $:any
 
+declare function gridSwiper();
+
+declare function miGrilla();
+
+declare function particula(a?:any,b?:any)
 
 @Component({
   selector: 'app-experiencia',
@@ -48,6 +53,7 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
+
   
   
   ngOnInit():void{
@@ -60,8 +66,11 @@ export class ExperienciaComponent implements OnInit {
     })
 
    
-    
+   // gridSwiper();
+
+      //miGrilla()
    
+    // particula()
   }
 
 

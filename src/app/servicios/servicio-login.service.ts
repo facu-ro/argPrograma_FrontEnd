@@ -15,7 +15,7 @@ import { Persona } from '../modelos/persona';
 @Injectable()
 export class ServicioLoginService {
 
-    private user:Persona=new Persona();
+    private user:Persona;
 
     private login$=new BehaviorSubject<boolean>(false);
 
@@ -37,14 +37,18 @@ export class ServicioLoginService {
     }
 
 
+    // ( sessionStorage.getItem("user_name")==null) ? this.EstadoLogin=true : this.EstadoLogin=false
+
 
     login(dato:any):Observable<any>{
 
         console.log(dato)
-        this.user.setEmail(dato.username);
-        this.user.setPassword(dato.password)      
+        
+        this.user=new Persona(dato.username,dato.password)
+      //  this.user.setEmail(dato.username);
+       // this.user.setPassword(dato.password)      
   
-        return this.http.post<any>("http://localhost:8080/login",this.user)
+        return this.http.post<any>("http://localhost:8080/api/login",this.user)
        /*   .pipe(
             tap(
                 res=>{
