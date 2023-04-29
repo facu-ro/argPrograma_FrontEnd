@@ -20,7 +20,7 @@ export class ServicioExperienciaService {
     
    dato:any;
   // http://localhost:8080
-  private url:string='https://mi-portfolio-front.web.app/api/experiencia/';
+  private url:string='https://portfolio-back-rywe.onrender.com/api/experiencia/';
 
   private obser= new Subject<Experiencia[]>();
 
