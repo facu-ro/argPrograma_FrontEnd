@@ -47,8 +47,9 @@ export class ServicioLoginService {
         this.user=new Persona(dato.username,dato.password)
       //  this.user.setEmail(dato.username);
        // this.user.setPassword(dato.password)      
-  
-        return this.http.post<any>("http://localhost:8080/api/login",this.user)
+  //http://localhost:8080
+       
+        return this.http.post<any>("https://portfolio-back-rywe.onrender.com/api/login",this.user)
        /*   .pipe(
             tap(
                 res=>{

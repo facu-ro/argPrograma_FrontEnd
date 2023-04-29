@@ -24,7 +24,9 @@ export class ServicioPresentacionService {
 
     private login$=new BehaviorSubject<boolean>(false);
 
-    private url:string='http://localhost:8080/api/presentacion/';
+    //http://localhost:8080
+    
+    private url:string='https://portfolio-back-rywe.onrender.com/api/presentacion/';
 
 
     constructor(private http:HttpClient, private servicio_login:ServicioLoginService){ 

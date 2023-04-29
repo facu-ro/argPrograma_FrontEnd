@@ -2,7 +2,9 @@
 .seccion{
     position: relative;
 
-    overflow-x: hidden;
+    overflow: hidden;
+
+    box-sizing: border-box;
 }
 
 
@@ -20,6 +22,8 @@ video {
   background-color: #23d5ab;
 }
 
+/*
+
 
 .particles-js-canvas-el{
     position: fixed;
@@ -30,6 +34,7 @@ video {
     z-index: -1;
     background-color: rgba(165, 42, 42, 0.363);
 }
+
 
 
 #container {
@@ -49,7 +54,6 @@ video {
     z-index: 10;
   }
 
-/*
 
 
 .shadow{

@@ -14,7 +14,10 @@ export class ServicioHabilidadService {
 
    datosHabilidad:Habilidad[];
 
-    private url:string='http://localhost:8080/api/habilidad/';
+   
+
+   //http://localhost:8080
+    private url:string='https://portfolio-back-rywe.onrender.com/api/habilidad/';
 
     private obser= new Subject<Habilidad[]>();
   

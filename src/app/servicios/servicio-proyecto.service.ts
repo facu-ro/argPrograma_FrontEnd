@@ -12,8 +12,11 @@ export class ServicioProyectoService {
 
     datosProyectos:Proyecto[];
 
-    private url:string='http://localhost:8080/api/proyecto/';
+    //http://localhost:8080
+    private url:string='https://portfolio-back-rywe.onrender.com/api/proyecto/';
 
+
+    
     private obser= new Subject<Proyecto[]>();
   
 

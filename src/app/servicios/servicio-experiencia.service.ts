@@ -19,8 +19,8 @@ export class ServicioExperienciaService {
 
     
    dato:any;
-
-  private url:string='http://localhost:8080/api/experiencia/';
+  // http://localhost:8080
+  private url:string='https://mi-portfolio-front.web.app/api/experiencia/';
 
   private obser= new Subject<Experiencia[]>();
 
