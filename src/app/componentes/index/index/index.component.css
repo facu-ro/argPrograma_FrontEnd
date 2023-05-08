@@ -8,6 +8,11 @@
 }
 
 
+
+.seccion-1{
+    
+}
+
 video {
   position:absolute;
   left: 50%;
@@ -20,6 +25,14 @@ video {
   transform: translate(-50%,-50%);
 
   background-color: #23d5ab;
+}
+
+
+@media (max-width: 800px){ 
+
+    video{
+        display: none;
+    }
 }
 
 /*

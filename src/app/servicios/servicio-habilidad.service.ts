@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import {map,tap} from "rxjs/operators"
+import { environment } from 'src/environments/environment';
 import { Habilidad } from '../modelos/habilidad';
 
 import { ServicioLoginService } from './servicio-login.service';
@@ -16,8 +17,8 @@ export class ServicioHabilidadService {
 
    
 
-   //http://localhost:8080
-    private url:string='https://portfolio-back-rywe.onrender.com/api/habilidad/';
+   //http://localhost:8080 'https://portfolio-back-rywe.onrender.com/api/habilidad/'
+    private url:string='http://localhost:8080/api/habilidad/';
 
     private obser= new Subject<Habilidad[]>();
   

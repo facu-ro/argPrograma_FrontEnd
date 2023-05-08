@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
 
 import {map,tap} from "rxjs/operators"
+import { environment } from 'src/environments/environment';
 
 import { Proyecto } from '../modelos/proyecto';
 import { ServicioLoginService } from './servicio-login.service';
@@ -12,8 +13,8 @@ export class ServicioProyectoService {
 
     datosProyectos:Proyecto[];
 
-    //http://localhost:8080
-    private url:string='https://portfolio-back-rywe.onrender.com/api/proyecto/';
+    //http://localhost:8080 'https://portfolio-back-rywe.onrender.com/api/proyecto/'
+    private url:string='http://localhost:8080/api/proyecto/';
 
 
     

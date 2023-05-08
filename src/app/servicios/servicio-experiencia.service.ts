@@ -9,6 +9,7 @@ import {map,tap} from "rxjs/operators"
 import { Experiencia } from '../modelos/experiencia';
 import { Persona } from '../modelos/persona';
 import { ServicioLoginService } from './servicio-login.service';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -19,8 +20,8 @@ export class ServicioExperienciaService {
 
     
    dato:any;
-  // http://localhost:8080
-  private url:string='https://portfolio-back-rywe.onrender.com/api/experiencia/';
+  // http://localhost:8080 'https://portfolio-back-rywe.onrender.com/api/experiencia/'
+  private url:string='http://localhost:8080/api/experiencia/';
 
   private obser= new Subject<Experiencia[]>();
 

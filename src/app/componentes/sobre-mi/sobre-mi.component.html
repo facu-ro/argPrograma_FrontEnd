@@ -1,7 +1,6 @@
 
 <section id="sobre_mi" >
     
-  <div class="saludo" >
 
  
 
@@ -13,8 +12,9 @@
 
     </div>
 
-       <!--*ngIf="EstadoLogin" style="width: 30px;height:40px;background-color:green;"-->
-    <div *ngIf="EstadoLogin" class="boton-editar" style="width: 10%;height:40px;" >
+          
+          <!--*ngIf="EstadoLogin" style="width: 30px;height:40px;background-color:green;" {{sobre_mi.descripcion }} -->
+    <div *ngIf="EstadoLogin" class="boton-editar" style="width: 100%; text-align:center;height:40px;" >
       <button type="button" class="btn"  data-bs-toggle="modal" data-bs-target="#sobremi" (click)="ItemPresentacion(sobre_mi)">
           <i class="fas fa-edit"></i>
       </button>
@@ -25,13 +25,16 @@
       <figure>
         <img  src="../assets/imagenes/descarga.jpg" alt="foto de Facu"/>
         <p >
-          {{sobre_mi.descripcion }}
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque sapiente, inventore quasi culpa eum, nulla voluptatum corrupti, rerum odio dolorum facilis delectus veritatis nihil a impedit vitae modi est harum sed. Saepe officia quaerat debitis, eveniet soluta beatae aspernatur blanditiis totam excepturi, sequi reiciendis reprehenderit deleniti a id. Illum, reiciendis?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, consequatur qui dolorem exercitationem tenetur tempore vero possimus corporis. Laboriosam qui unde voluptatem distinctio expedita nam, rerum ipsam blanditiis doloremque vel autem! Nemo dicta sequi officia exercitationem aliquam quisquam porro repudiandae quae ex, repellat hic. Maiores vel veritatis aliquid nostrum molestiae?
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga, nihil delectus facere ex, id ipsa nisi, similique commodi accusantium quia maiores nostrum quis quidem sit inventore reiciendis voluptas placeat odit saepe. Mollitia quia beatae consectetur, hic eaque repellat vel! Obcaecati reiciendis provident repellat, temporibus beatae quos sapiente voluptas nesciunt!
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id reprehenderit alias quos suscipit at voluptatum similique! Totam nemo quasi asperiores iusto voluptate maiores excepturi accusamus sed ratione. Non id possimus harum minima incidunt voluptates aliquid molestias ex atque eum, blanditiis deleniti dolor libero qui laudantium quia ratione illo eaque accusamus.
         </p>
       </figure>
   
+    
     </div>
 
-  </div>
 
   
 

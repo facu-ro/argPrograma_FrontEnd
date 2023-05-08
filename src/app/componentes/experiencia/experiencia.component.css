@@ -10,7 +10,7 @@
 .botones{
 
     position: absolute;
-    bottom:5%;
+    bottom:0%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
@@ -130,8 +130,14 @@
 .caja-card{
 
     overflow: hidden;
+
+}
+
+.contenido{
     position: relative;
 
+    height: 100%;
+    overflow: hidden;
 }
 
 .caja-descripcion{
@@ -139,18 +145,17 @@
     
     width: 100%;
 
-    
+   
     position: absolute;
 
+    top:100%;
     
-    opacity: 0;
     height: 100%;
 
     transition: all .5s;
 
     overflow-y: scroll;
 
-    transform: translateY(100%);
 
     font-size: 1rem;
     color: aliceblue;
@@ -160,16 +165,13 @@
     background-color: rgba(98, 22, 197, 0.6);
 }
 
-.card:hover .caja-descripcion{
+.contenido:hover .caja-descripcion{
 
-    transform: translateY(0%);
-    opacity: 1;
+    top:0;
+        
     transition: all .5s;
-
     
 }
-
-
 
 
 .caja-descripcion::-webkit-scrollbar{

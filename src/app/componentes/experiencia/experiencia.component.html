@@ -1,8 +1,6 @@
-
- 
 <section id="experiencia">
 
-  <div >
+  <div>
     <h2 style="text-align: center; padding:50px">experiencias</h2>
     <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar"
       (click)="agregarExperiencia()">
@@ -13,35 +11,40 @@
 
   <div class="container caja">
 
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3" style="margin:10px;">
+    <div class="row " style="margin:10px;">
 
-      <div class=" col" style="margin-bottom:10px; margin-top:10px;" *ngFor="let i of (datosObservable$ | async) ; index as indice">
+      <div class=" col-12  col-sm-6 col-md-4" style="margin-bottom:10px; margin-top:10px;"
+        *ngFor="let i of (datosObservable$ | async) ; index as indice">
 
         <div class="card text-center h-100 shadow">
 
-          <div class="contenido caja-card">
+          <div class="contenido">
+            <div class="caja-card">
 
-            <img class="card-img-top" src="../assets/imagenes/descarga.jpg" alt="">
+              <img class="card-img-top" src="../assets/imagenes/descarga.jpg" alt="">
 
-            <div class="card-body ">
+              <div class="card-body ">
 
-              <h2 style=" color:black">{{i.empresa}}</h2>
-              <h3 style=" color:black">{{i.puesto}}</h3>
+                <h2 style=" color:black">{{i.empresa}}</h2>
+                <h3 style=" color:black">{{i.puesto}}</h3>
+
+              </div>
+
+              <!--*ngIf="EstadoLogin" card-footer [ngStyle]="EstadoLogin ? {'display':'none'}: {'display':'block'}" -->
 
             </div>
-          
-           <!--*ngIf="EstadoLogin" card-footer [ngStyle]="EstadoLogin ? {'display':'none'}: {'display':'block'}" -->
-          
+            <div class="card-text caja-descripcion">
+              <p class="">{{i.descripcion}} {{indice}}</p>
+            </div>
+
+            <div *ngIf="EstadoLogin" class="botones ">
+              <button data-bs-toggle="modal" data-bs-target="#experiencia-editar" #boton (click)="ItemExperiencia(i)"><i
+                  class="fas fa-edit"></i> </button>
+              <button (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button>
+            </div>
+
           </div>
 
-          <div class="card-text caja-descripcion">
-            <p class="">{{i.descripcion}} {{indice}}</p>
-          </div>
-
-          <div *ngIf="EstadoLogin" class="botones ">
-            <button data-bs-toggle="modal" data-bs-target="#experiencia-editar" #boton (click)="ItemExperiencia(i)"><i class="fas fa-edit"></i> </button>
-            <button (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button>
-          </div>
 
         </div>
 
@@ -66,5 +69,3 @@
 
 
 <app-editar-experiencia></app-editar-experiencia>
-
-

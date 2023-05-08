@@ -9,6 +9,7 @@ import {map,tap} from "rxjs/operators"
 
 
 import { Persona } from '../modelos/persona';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -19,6 +20,8 @@ export class ServicioLoginService {
 
     private login$=new BehaviorSubject<boolean>(false);
 
+    //"https://portfolio-back-rywe.onrender.com/api/login"
+    private url:string='http://localhost:8080/api'
 
 
     constructor(private http:HttpClient){ }
@@ -49,7 +52,7 @@ export class ServicioLoginService {
        // this.user.setPassword(dato.password)      
   //http://localhost:8080
        
-        return this.http.post<any>("https://portfolio-back-rywe.onrender.com/api/login",this.user)
+        return this.http.post<any>(this.url+'/login',this.user)
        /*   .pipe(
             tap(
                 res=>{

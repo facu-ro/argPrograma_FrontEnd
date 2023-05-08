@@ -5,6 +5,7 @@ import { Estudio } from '../modelos/estudio';
 import { ServicioLoginService } from './servicio-login.service';
 
 import {map,tap} from "rxjs/operators"
+import { environment } from 'src/environments/environment';
 
 
 @Injectable()
@@ -15,8 +16,8 @@ export class ServicioEducacionService {
 
    
 
-    //http://localhost:8080
-    private url:string='https://portfolio-back-rywe.onrender.com/api/educacion/';
+    //http://localhost:8080 'https://portfolio-back-rywe.onrender.com/api/educacion/'
+    private url:string='http://localhost:8080/api/educacion/';
 
     private obser= new Subject<Estudio[]>();
   

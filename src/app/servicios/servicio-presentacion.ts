@@ -11,6 +11,7 @@ import {map,tap} from "rxjs/operators"
 
 import { Presentacion } from '../modelos/presentacion';
 import { ServicioLoginService } from './servicio-login.service';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -24,9 +25,9 @@ export class ServicioPresentacionService {
 
     private login$=new BehaviorSubject<boolean>(false);
 
-    //http://localhost:8080
+    //http://localhost:8080 'https://portfolio-back-rywe.onrender.com/api/presentacion/'
     
-    private url:string='https://portfolio-back-rywe.onrender.com/api/presentacion/';
+    private url:string='http://localhost:8080/api/presentacion/'; 
 
 
     constructor(private http:HttpClient, private servicio_login:ServicioLoginService){ 
