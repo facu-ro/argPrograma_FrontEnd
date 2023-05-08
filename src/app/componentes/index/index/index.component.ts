@@ -16,9 +16,9 @@ export class IndexComponent implements OnInit {
 
   ngOnInit() {
 
-  //particula()
+    particula()
 
-  particlesJS.load('particles-js',{
+ /* particlesJS.load('particles-js',{
     "particles": {
       "number": {
         "value": 100,
@@ -134,7 +134,7 @@ export class IndexComponent implements OnInit {
       "background_size": "cover",
       
     }
-  })
+  }) */
    
  
   }

@@ -4,3 +4,36 @@
 *{
     color: white;
 }
+
+
+.seccion{
+    position: relative;
+
+    
+
+    box-sizing: border-box;
+}
+
+
+video {
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+   
+  
+    transform: translate(-50%,-50%);
+  
+    background-color: #23d5ab;
+  }
+  
+  
+  @media (max-width: 800px){ 
+  
+      video{
+          display: none;
+      }
+  }
+  

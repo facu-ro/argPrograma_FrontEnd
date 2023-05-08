@@ -1,60 +1,52 @@
 
-.seccion{
-    position: relative;
-
-    overflow: hidden;
-
-    box-sizing: border-box;
-}
 
 
 
-.seccion-1{
+#particles-js{
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+   
+    width: 100%;
+
+    height: 100%;
     
-}
-
-video {
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -1;
- 
-
-  transform: translate(-50%,-50%);
-
-  background-color: #23d5ab;
+   
+    
+   
 }
 
 
-@media (max-width: 800px){ 
 
-    video{
-        display: none;
+
+
+
+@media (max-width:800px){
+
+    .caja-particulas{
+   
+        position: relative;
+        width: 100%;
+
+        
+       
+        
+        
+     
+    }
+
+    #particles-js{
+        display: block;
+        z-index: -1;
     }
 }
 
 /*
 
 
-.particles-js-canvas-el{
-    position: fixed;
-    top: 0;
-   
-    width: 100%;
-    
-    z-index: -1;
-    background-color: rgba(165, 42, 42, 0.363);
-}
 
-
-
-#container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
   #particles-js,
   #over {
     width: 100%;
