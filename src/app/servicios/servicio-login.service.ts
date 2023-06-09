@@ -20,8 +20,8 @@ export class ServicioLoginService {
 
     private login$=new BehaviorSubject<boolean>(false);
 
-    //'http://localhost:8080/api' "https://portfolio-back-rywe.onrender.com/api/login"
-    private url:string="https://portfolio-back-rywe.onrender.com/api/login"
+    //'http://localhost:8080/api' "https://portfolio-back-rywe.onrender.com/api"
+    private url:string='http://localhost:8080/api' 
 
 
     constructor(private http:HttpClient){ }

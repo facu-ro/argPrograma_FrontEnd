@@ -12,8 +12,10 @@ declare var particlesJS: any;
 })
 export class IndexComponent implements OnInit {
 
+  
   constructor() { }
 
+ 
   ngOnInit() {
 
     particula()

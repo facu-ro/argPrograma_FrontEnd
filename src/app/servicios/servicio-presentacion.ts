@@ -16,7 +16,7 @@ import { environment } from 'src/environments/environment';
 
 
 @Injectable()
-export class ServicioPresentacionService {
+export class ServicioPresentacionService  {
 
   datosPresentacions:Presentacion;
 
@@ -27,7 +27,7 @@ export class ServicioPresentacionService {
 
     //'http://localhost:8080/api/presentacion/' 'https://portfolio-back-rywe.onrender.com/api/presentacion/'
     
-    private url:string='https://portfolio-back-rywe.onrender.com/api/presentacion/'; 
+    private url:string='http://localhost:8080/api/presentacion/'; 
 
 
     constructor(private http:HttpClient, private servicio_login:ServicioLoginService){ 
