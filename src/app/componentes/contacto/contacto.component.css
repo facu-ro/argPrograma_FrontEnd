@@ -1,0 +1,59 @@
+
+
+
+#contacto{
+
+    /* width: 70%; */
+    margin: auto;
+    background: linear-gradient(45deg, rgba(57, 167, 130, 0.253), rgba(105, 57, 167, 0.253));
+    
+    padding: 1%;
+}
+
+.form-floating label{
+    font-weight: 400;
+}
+
+
+#contacto form input {
+    background-color: rgb(0, 255, 255,0.3);
+    color: white;
+    border: 1px solid #6710f28f;
+}
+
+#contacto form textarea{
+
+    background-color: rgb(0, 255, 255,0.3);
+    color: white;
+    border: 1px solid #6710f28f;
+}
+
+#alert{
+    padding: 0%;
+}
+
+
+#contacto .container-fluid{
+    width: 90%; 
+    margin: auto ;
+}
+
+
+
+
+
+
+@media screen and (max-width: 800px){ 
+
+    #contacto{
+  
+      background-image:url('src/assets/imagenes/fondos/5.jpg');
+      
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  
+    
+    }
+
+}

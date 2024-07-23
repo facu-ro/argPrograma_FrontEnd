@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+
+
 declare function particula(a?:any,b?:any)
 
 declare var particlesJS: any;
@@ -18,6 +22,7 @@ export class AppComponent implements OnInit{
 
 
   ngOnInit(){
+     
 
     //particula()
  

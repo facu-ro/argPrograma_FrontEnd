@@ -1,13 +1,14 @@
-import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, of, Subject } from 'rxjs';
 
 
 import { Experiencia } from 'src/app/modelos/experiencia';
 
 import { ServicioExperienciaService } from 'src/app/servicios/servicio-experiencia.service';
 import { ServicioLoginService } from 'src/app/servicios/servicio-login.service';
+import { ServicioScrollService } from 'src/app/servicios/servicio-scroll.service';
 import { EditarExperienciaComponent } from '../modals/experiencias/editar-experiencia/editar-experiencia.component';
 
 declare var $:any
@@ -24,20 +25,20 @@ declare function particula(a?:any,b?:any)
   styleUrls: ['./experiencia.component.css']
 })
 
-export class ExperienciaComponent implements OnInit {
+export class ExperienciaComponent implements OnInit, AfterViewInit {
   
-  experiencia:Experiencia[];
-
   Datos:Experiencia[];
 
   @ViewChild("boton") boton:ElementRef
+
+  @ViewChild("accordionExample") acordion:ElementRef
  
   @ViewChild(EditarExperienciaComponent) compEditar;
 
 
+  datosObservable$=this.servicio_experiencia.getDatosExperiencia 
 
- //datosObservable$:Observable<Experiencia[]>/*=this.servicio_experiencia.getDatosExperiencia*/
-  datosObservable$=this.servicio_experiencia.getDatosExperiencia
+  experiencias:Experiencia[]
 
   EstadoLogin:boolean
 
@@ -46,11 +47,12 @@ export class ExperienciaComponent implements OnInit {
               private ruta:ActivatedRoute, 
               private formBuilder:FormBuilder,
              // private servicio_login:ServicioLoginService
+             private scroll:ServicioScrollService
             ){
 
-   // this.EstadoLogin=this.servicio_experiencia.getEstadoLogin();
-   //this.datosObservable$=this.servicio_experiencia.getDatosExperiencia
-
+          //    window.addEventListener("load", ()=>{console.log("entro al evento"); this.generarTargetId()}  )
+              
+             
   }
 
 
@@ -58,6 +60,25 @@ export class ExperienciaComponent implements OnInit {
   
   ngOnInit():void{
 
+    
+
+    let  dic_clases={
+      vista:{
+        agregar:["animate__lightSpeedInRight"],
+        quitar:["animate__lightSpeedOutLeft"]
+      },
+      
+      noVista:{
+        agregar:["animate__lightSpeedOutLeft"],
+        quitar:["animate__lightSpeedInRight"]
+      }
+    }
+   
+    const titulo:HTMLElement = document.querySelector('#h2-titulo'); // Obtiene la referencia a la etiqueta figure
+    this.scroll.viewPosition(dic_clases).observe(titulo); // Observa la etiqueta figure para detectar intersecciones
+
+
+    
     this.servicio_experiencia.getEstadoLogin.subscribe(data=>{
 
       this.EstadoLogin=data
@@ -65,13 +86,60 @@ export class ExperienciaComponent implements OnInit {
       
     })
 
-   
-   // gridSwiper();
 
-      //miGrilla()
-   
-    // particula()
+    // this.servicio_experiencia.getDatosExperiencia.subscribe(data=>{
+
+    //   this.experiencias=data;
+
+    //   console.log("entro al servicio experiencia"); 
+      
+    //   // this.generarTargetId()
+
+    // })
+
+
   }
+
+
+  ngAfterViewInit():void{}
+
+  
+
+  // generarTargetId(){
+
+  //   console.log("entro a la funcion")
+    
+  //   let buttons=document.querySelectorAll(".accordion-button");
+  //   let collapse=document.querySelectorAll(".accordion-collapse");
+  //   let header=document.querySelectorAll(".accordion-header");
+  //   let body=document.querySelectorAll(".accordion-body");
+
+  //   let experiencia=document.querySelector("#accordionExample .accordion-header .accordion-button")
+
+  //   console.log("hay " + buttons.length + " botones")
+
+  //   for(let i=0; i < buttons.length ; i++ ){
+
+  //     // console.log("#item-acordeon_" + i)
+      
+  //     header[i].setAttribute("id","heading_"+i); 
+      
+  //     console.log("tiene el atributo?: " + buttons[i].hasAttribute("data-bs-target"))
+  //     if( !buttons[i].hasAttribute("data-bs-target") || !buttons[i].hasAttribute("aria-controls")){
+  //       buttons[i].setAttribute("data-bs-target","#item-acordeon_" + i );
+  //       buttons[i].setAttribute("aria-controls","item-acordeon_" + i );  
+
+  //       console.log("tiene el atributo?: " + buttons[i].hasAttribute("data-bs-target"))
+  //     }
+
+      
+  //     // collapse[i].setAttribute("id","item-acordeon_" + i );
+
+  //     body[i].setAttribute("aria-labelledby", "heading_"+i);
+      
+  //   }
+    
+  // }
 
 
 
@@ -111,14 +179,7 @@ export class ExperienciaComponent implements OnInit {
       url:item.url,
       empresa:item.empresa,           
       })
-    
-    //this.boton.nativeElement.setAttribute("data-bs-toggle","modal")
-    //this.boton.nativeElement.setAttribute("data-bs-target","#experiencia-editar") 
-   /*this.form.setValue({
-      descripcion:item.descripcion,
-      id:item.id,
-      imagen:item.imagen              
-      })*/
+   
   }
 
 
@@ -138,26 +199,6 @@ export class ExperienciaComponent implements OnInit {
 
   }
 
-    /*
 
-  ver_experiencia(experiencia):void{
-
-    experiencia.map( i=> console.log(i.descripcion))
-
-    for(let i=0; i<this.experiencia.length;i++){
-
-      console.log(i + " "+ this.experiencia[i].sobre_mi)
-    }*/
-
-    /*
-    let c:number=0;
-    for(let i of this.experiencia){
-      console.log(i.descripcion)
-      c++;
-    }
-
-
-  }
-    */
   
 }

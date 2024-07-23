@@ -1,12 +1,15 @@
+
+<!--MENU NORMAL-->
+
 <nav class="boton">
 
-  <button class="icono btn btn-info" type="button" (click)="openMenu()">
-    <i class="fa-solid fa-bars"></i>
-  </button>
+  <div class="btn-nav" [ngClass]="open ? 'btn-nav-active' : '' " (click)="openMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-
-
-  <ul [ngStyle]=" open ? {'background-color': 'rgb(0, 255, 255,0.1)'} : {'background-color': 'transparent'}">
+  <ul [ngStyle]=" open ? {'background-color': 'rgba(103, 16, 242, 0.257)'} : {'background-color': 'transparent'}">
     <li *ngIf="!EstadoLogin" class="btn btn-primary " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
       data-bs-target="#login">Login <i class="fas fa-sign-in-alt"></i></li>
 
@@ -15,14 +18,18 @@
       <span (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
     </li>
 
-    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-github"></span></a></li>
-    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-instagram"></span></a></li>
-    <li class="icono" [ngClass]="open ? 'list': 'noList' "><a href="#"><span class="fab fa-twitter"></span></a></li>
+    <li routerLink="/" fragment="sobre_mi" [ngClass]="open ? 'list': 'noList' "> sobre mi</li>
+    <li routerLink="/" fragment="experiencia"   [ngClass]="open ? 'list': 'noList' " >experiencias</li>  <!--(click)="goToSection()"-->
+    <li routerLink="/" fragment="proyectos"   [ngClass]="open ? 'list': 'noList' " >proyectos</li>
+    <li routerLink="/" fragment="contacto"   [ngClass]="open ? 'list': 'noList' " >contactos</li>
+    <li class="li4" [ngClass]="open ? 'list': 'noList' ">links
+      
+      <app-links id="links" [menu]=1 ></app-links>
+    
+    </li>
 
   </ul>
-
-
-
+ 
 </nav>
 
 
@@ -30,6 +37,8 @@
 <!--data-bs-toggle="modal" data-bs-target="#login"  routerLink="/modalLoguin"
 
 fixed-top sticky-top -->
+
+<!--MENU RESPONSIVE-->
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
  
@@ -39,28 +48,40 @@ fixed-top sticky-top -->
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openMenu()">
-      <span class="navbar-toggler-icon"></span>
+      
+      <i class="fa-solid fa-bars"></i>
     </button>
 
-    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li *ngIf="!EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
-        data-bs-target="#login"><span class=" btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></span></li>
+          data-bs-target="#login"><button class=" btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
+       </li>
   
-  
-      <li *ngIf="EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' ">
-        <span class="btn btn-danger" (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
-      </li>
-  
-      <li class="nav-item icono"><a href="#"><span class="fab fa-github"></span></a></li>
-      <li class="nav-item icono" ><a href="#"><span class="fab fa-instagram"></span></a></li>
-      <li class="nav-item icono" ><a href="#"><span class="fab fa-twitter"></span></a></li>
-  
+        <li *ngIf="EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' ">
+          <span class="btn btn-danger" (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
+        </li>
+        
+        <li class="nav-item " routerLink="/" fragment="sobre_mi" > sobre mi</li>
+        
+        <li class="nav-item " routerLink="/" fragment="experiencia" >experiencias</li> 
+
+        <li class="nav-item " routerLink="/" fragment="proyectos" >proyectos</li>
+
+        <li class="nav-item " routerLink="/" fragment="contacto" >contactos</li>
+
+        <li class="nav-item dropdown"> 
+
+          <app-links [menu]=2></app-links>
+        </li>
+        
       </ul>  
     </div>
 
   </div>
 
 </nav>
+
+
 
 <app-modal-login></app-modal-login>

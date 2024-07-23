@@ -27,6 +27,9 @@ import { HabilidadComponent } from './componentes/habilidad/habilidad.component'
 import { EditarHabilidadComponent } from './componentes/modals/habilidad/editar-habilidad/editar-habilidad.component';
 import { ServicioHabilidadService } from './servicios/servicio-habilidad.service';
 import { ServicioPresentacionService } from './servicios/servicio-presentacion';
+import { LinksComponent } from './componentes/links/links.component';
+import { PresentacionComponent } from './componentes/presentacion/presentacion.component';
+import { ContactoComponent } from './componentes/contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,10 @@ import { ServicioPresentacionService } from './servicios/servicio-presentacion';
     EditarProyectoComponent,
     HabilidadComponent,
     EditarHabilidadComponent,
-    IndexComponent
+    IndexComponent,
+    LinksComponent,
+    PresentacionComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +62,6 @@ import { ServicioPresentacionService } from './servicios/servicio-presentacion';
   ],
  // entryComponents: [ EditarExperienciaComponent],
   providers: [ServicioExperienciaService,ServicioLoginService,ServicioProyectoService, ServicioHabilidadService, ServicioPresentacionService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]//IndexComponent
 })
 export class AppModule { }

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Proyecto } from 'src/app/modelos/proyecto';
 
 import { ServicioProyectoService } from 'src/app/servicios/servicio-proyecto.service';
+import { ServicioScrollService } from 'src/app/servicios/servicio-scroll.service';
 import { EditarProyectoComponent } from '../modals/proyectos/editar-proyecto/editar-proyecto.component';
 
 
@@ -28,7 +29,8 @@ export class ProyectosComponent implements OnInit {
   @ViewChild(EditarProyectoComponent) compEditar;
 
 
-  constructor(private servicio_proyecto:ServicioProyectoService){ }
+  constructor(private servicio_proyecto:ServicioProyectoService,
+              private scroll:ServicioScrollService){ }
 
 
 
@@ -47,6 +49,23 @@ export class ProyectosComponent implements OnInit {
       this.datosProyectos=data;
 
     })
+
+
+    let  dic_clases={
+      vista:{
+        agregar:["animate__flipInX"],
+        quitar:["animate__flipOutX"]
+      },
+      
+      noVista:{
+        agregar:["animate__flipOutX"],
+        quitar:["animate__flipInX"]
+      }
+    }
+   
+    const titulo:HTMLElement = document.querySelector('#titulo-proyecto'); // Obtiene la referencia a la etiqueta figure
+    this.scroll.viewPosition(dic_clases).observe(titulo); // Observa la etiqueta figure para detectar intersecciones
+
 
 
     iniciarSwipper()

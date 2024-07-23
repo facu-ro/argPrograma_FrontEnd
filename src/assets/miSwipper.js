@@ -1,11 +1,5 @@
 
-function miGrilla(){
-  
-  $('.expansion-grid').expansionGrid({
-    position: true,
-    positionOffset: -6
-  });
-}
+
 
 function gridSwiper(){
 

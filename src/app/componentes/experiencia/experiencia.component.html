@@ -1,15 +1,55 @@
-<section id="experiencia">
 
-  <div>
-    <h2 style="text-align: center; padding:50px">experiencias</h2>
+
+<section id="experiencia" >
+
+  <div > <!---->
+    <h2 id="h2-titulo" class="text-shadow text-center animate__animated" style="  margin-bottom:50px; ">Experiencias</h2>
     <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar"
       (click)="agregarExperiencia()">
       agregar<i class="far fa-plus-square"></i></button>
   </div>
 
-  <!--*ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]"-->
+  <div >
 
-  <div class="container caja">
+    <!-- text-success -->
+    <div class="accordion" id="accordionExample" #accordionExample>
+      <div class="accordion-item" *ngFor="let i of (datosObservable$ | async) ; index as indice">
+        
+        <h3 [id]="'heading_' + indice" class="accordion-header">
+          
+          <button class="accordion-button collapsed text-shadow-links"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#item-acordeon_' + indice"
+                  [attr.aria-controls]="'item-acordeon_' + indice"
+                  aria-expanded="false">
+            {{ i.empresa }} {{ i.puesto }}
+          </button>
+        </h3>
+        
+        <div [id]="'item-acordeon_' + indice" class="accordion-collapse collapse" data-bs-parent="#accordionExample" style="position:relative;"> 
+          
+          <div *ngIf="EstadoLogin" class="botones">
+            <button data-bs-toggle="modal" data-bs-target="#experiencia-editar" #boton (click)="ItemExperiencia(i)">
+              <i class="fas fa-edit"></i> 
+            </button>
+            <button (click)="borrar(i)"><i class="fas fa-trash-alt"></i></button>
+          </div>
+          
+          <div class="accordion-body" [attr.aria-labelledby]="'heading_' + indice">
+            {{ i.descripcion }} {{ indice }}  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+
+
+  <!-- <div class="container caja">
 
     <div class="row " style="margin:10px;">
 
@@ -30,7 +70,6 @@
 
               </div>
 
-              <!--*ngIf="EstadoLogin" card-footer [ngStyle]="EstadoLogin ? {'display':'none'}: {'display':'block'}" -->
 
             </div>
             <div class="card-text caja-descripcion">
@@ -53,7 +92,7 @@
 
     </div>
 
-  </div>
+  </div> -->
 
 
 
@@ -65,7 +104,34 @@
 
 
 
+
+
+
 <app-agregar-experiencia></app-agregar-experiencia>
 
 
 <app-editar-experiencia></app-editar-experiencia>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

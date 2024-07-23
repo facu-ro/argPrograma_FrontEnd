@@ -1,0 +1,20 @@
+
+ <a *ngIf="menu==2" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Links
+  </a> 
+
+<ul *ngIf="  menu==1 ||  menu==2 ||  menu==3" [ngClass]="{ 'ul-links' : menu==1 , 'ul-links-responsive dropdown-menu' : menu==2 , 'ul-contacto' : menu==3  }">
+    <li class="icono" [ngClass]="{ 'nav-item ' : menu==1 || menu==3 , 'dropdown-item ' : menu==2 }"><a class="text-shadow-links" href="#"><span class="fab fa-github"></span> </a></li>
+    <li class="icono" [ngClass]="{ 'nav-item ' : menu==1 || menu==3 , 'dropdown-item ' : menu==2 }" ><a class="text-shadow-links" href="#"><span class="fab fa-instagram"></span> </a></li>
+    <li class="icono" [ngClass]="{ 'nav-item ' : menu==1 || menu==3 , 'dropdown-item ' : menu==2 }" ><a class="text-shadow-links" href="#"><span class="fab fa-twitter"></span> </a></li>
+</ul>
+
+
+
+<ul *ngIf="menu==4" class="ul-links-contacto">
+  <li><a class="font" href="#"> <i class="fab fa-github"></i> github </a></li>
+  <li><a class="font" href="#"> <i class="fab fa-instagram"></i> instagram </a></li>
+  <li><a class="font" href="#"> <i class="fab fa-twitter"></i> twitter</a></li>
+  <li><a class="" href="mailto:95.rodriguez.facundo@gmail.com">95.rodriguez.facundo@gmail.com</a></li>
+</ul>
+

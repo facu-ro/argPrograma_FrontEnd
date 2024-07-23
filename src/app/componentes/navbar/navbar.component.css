@@ -1,9 +1,14 @@
 
+
+li{
+    cursor:pointer;
+}
+
+
+
 .boton{
 
-    display: flex;
-
-    background-color: transparent;
+    display: flex; 
 
     position: fixed;
 
@@ -20,13 +25,112 @@
     overflow: hidden;
 }
 
-.boton button{
-    display: block;
 
-    z-index: 10;
+
+
+/*--------------------------------------------------*/
+/*-------------CAJA MENU HAMBURGUESA---------------*/
+
+.boton .btn-nav{
+
+    display: flex;
+    flex-direction: column;
+ 
+    justify-content:space-around;
+
+    width:2.5rem;
+    background-color: rgb(0, 255, 255,0.5);
+    border:  1px solid #6610f2; 
+    
+
+    cursor:pointer;
+
+    transition: .5s;
+
+    border-radius: 30%;
+
+    overflow: hidden;
+
 }
 
 
+.btn-nav span{
+
+    width: 100%; 
+    height: 5px;
+    border-radius: 10px;
+    background-color: black;
+
+    transition: .5s all;
+}
+
+.boton .btn-nav:hover{
+
+    background-color: rgb(0, 255, 255);
+}
+
+
+/*---------------------------------------------------*/
+/*----- CAMBIO MENU HAMBURGUESA POR MENU CRUZ   ----*/
+
+.boton .btn-nav.btn-nav-active{
+    background-color: #6710f25b; 
+    /* color:rgba(190, 53, 167, 0.637); */
+    border-color: rgb(0, 255, 255);
+
+    transform: rotate(360deg);
+
+    position: relative;
+
+}
+
+.boton .btn-nav.btn-nav-active:hover{
+    background-color:#6610f2; 
+
+}
+
+.boton .btn-nav.btn-nav-active span{
+    position: absolute;
+    top: 50%;
+    transition: .5s ease-out;
+}
+
+.boton .btn-nav.btn-nav-active span:nth-child(1){
+    
+    transform: translateY(-50%) rotate(35deg) ;
+    
+}
+
+.boton .btn-nav.btn-nav-active span:nth-child(2){
+
+    transform:  translateY(-50%) rotate(-35deg);
+}
+
+.boton .btn-nav.btn-nav-active span:nth-child(3){
+    opacity: 0;
+}
+ 
+
+/*---------------------------*/
+/*----- MENU HAMBURGUESA ----*/
+ 
+.boton .btn-nav span:nth-child(1){
+    
+    transform:translateY(0%) rotate(0);
+}
+
+.boton .btn-nav span:nth-child(2){
+    transform:translateY(0%) rotate(0);
+}
+
+.boton .btn-nav span:nth-child(3){
+
+    opacity: 1;
+} 
+
+
+/*---------------------------------------------*/
+/*----- CAJA QUE CONTIENE LISTADO DE ICONOS ----*/
 
 .boton ul{
 
@@ -34,47 +138,55 @@
     
     list-style: none;
 
-    border-radius: 5px;
+    flex-direction: row;
 
-    position: absolute;
+    border-radius: 10px;
 
-    top: 50%;
-    
-    transform: translateY(-50%);
+    margin: 0;
 
+    padding: 0;
+
+    z-index: -1; 
     
 }
 
 .boton ul li{
-
-    margin-left:.5rem;
     
+    margin-left:.5rem;
+    padding:5px;
+    text-align: center;
+    color: rgba(0, 255, 255, 0.808);
 }
 
-.icono{
-    font-size: 1.5rem;
+.boton ul li:hover{
+    background-color: rgba(22, 212, 202, 0.753); 
+    color:white;
+    cursor: pointer;
+
 }
 
 
+/*-----------------------------*/
+/*------LISTADOS Y NO LISTADOS*/
 .list{
     
     transform: translateX(0%);
-    
   }
 
 .noList{
-
     /*opacity: 0;*/
-    transform: translateX(-1000%);
-
+    transform: translateX(-2000%);
+    /* visibility: collapse; */
   }
 
+
+/*---------------------------*/
+/*----- ICONOS NO LISTADOS ----*/
 
 .noList:nth-child(1){
     
-    transition: .1 all;
-
-  }
+    transition: .3s all;
+}
 
 
 .noList:nth-child(2){
@@ -83,46 +195,108 @@
 }
 
 .noList:nth-child(3){
-    
 
-    transition: .5 all;
+    transition: .5s all;
 }
 
 .noList:nth-child(4){
    
-
     transition: .7s all;
+   
 }
-  
 
+.noList:nth-child(5){
+   
+    transition: .7s all;
+   
+}
+
+.noList:nth-child(6){
+   
+    transition: .7s all;
+   
+}
+
+.noList:nth-child(7){
+   
+    transition: .7s all;
+   
+}
+
+
+/*------------------------------------------------------*/
+/*------------------------------------------------------*/
+/*-----------LINKS--------------------------*/
+
+.boton ul> li.li4{
+   z-index: 100px;
+}
+
+.boton ul> li.li4 > #links { 
+    /* .ul-links */
+    display:none;
+}
+
+.boton ul> li.li4:hover #links{
+    z-index: 100px;
+}
+
+.boton  ul> li.li4:hover > #links{
+
+    position: absolute;
+    top:0%;
+    left:40px;
+    display:block;
+}
+
+
+
+/*---------------------------*/
+/*----- ICONOS LISTADOS----*/
 
 .list:nth-child(1){
 
     transition:.1s all;
-
-  }
+}
 
 
 .list:nth-child(2){
     
-    transition:.3s all;
-
+    transition:.2s all;
 }
 
 .list:nth-child(3){
 
-    transition: .5s all;
+    transition: .3s all;
 
 }
 
 .list:nth-child(4){
     
-    transition:.7s all;
-
+    transition:.4s all;
 }
 
+.list:nth-child(5){
+    
+    transition:.5s all;
+}
 
+.list:nth-child(6){
+    
+    transition:.6s all;
+}
 
+.list:nth-child(7){
+    
+    transition:.7s all;
+}
+
+/*---------------------------*/
+/*--------------------------*/
+
+.navbar{
+        display:none;
+}
 
 @media all and (max-width:800px) {
 
@@ -130,13 +304,15 @@
         display:none;
     }
 
-    .navbar{
+    .navbar {
         display:block;
-        background-color: rgb(0, 255, 255,0.3);
+        background:linear-gradient(#0099ff,#6610f2);
         text-align: center;
+        padding: 0%;
     }
 
-    .navbar-brand{
+
+    a.navbar-brand{
         display: block;
     }
 
@@ -146,20 +322,25 @@
         height: 50px;
     }
 
- .navbar-nav li.icono span {
-       color: darkgoldenrod;
+    .navbar-nav li {
+       
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     
+    .navbar-nav li:hover {
+
+        background-color: #6710f285;
+        color:rgb(16, 242, 231);
+    }
+
 }
 
 
-@media all and (min-width:801px) {
+/* @media all and (min-width:801px) {
 
     .navbar{
         display:none;
     }
-    
-    .boton{
-        display:flex;
-    }
-}
+   
+} */

@@ -1,0 +1,39 @@
+
+
+#presentacion{
+
+    text-align: center;
+    margin: 20px auto ;
+
+}
+
+#presentacion h2{
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+ 
+
+#presentacion .container-fluid{
+    width: 80%;
+    margin: auto;
+
+}
+
+
+.octagon-container {
+    position: relative;
+    
+}
+
+.octagon-image {
+
+    border:1px solid #6610f2;
+    border-radius: 10px; 
+    box-shadow: 0 0 5px 5px #6710f28f;
+}
+
+    
+
+
+

@@ -1,0 +1,237 @@
+
+
+.font{
+    font-size: 1rem;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+a:active{
+    color:white;
+}
+
+a:visited{
+    color: white;
+}
+
+a:hover{
+    color:rgb(16, 242, 231);
+}
+
+ul{
+    list-style: none;
+}
+
+/*----------------------------------------------------*/
+/*ESTILOS PARA LOS LINKS EN EL MENU PANTALLA GRANDE*/
+/*----------------------------------------------------*/
+.ul-links{
+    
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.ul-links  li.nav-item{
+    
+    margin-left: 1rem;
+    text-align: center;
+    background-color: transparent;
+}
+
+.ul-links  li.nav-item > a > span{
+    
+    /* background-clip:text; */
+    color:white;
+    /* background-color:rgba(0, 255, 255); */
+    /* text-shadow: 0 0 5px rgba(0, 255, 255); */
+
+    --color:#6610f2;
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px var(--color), 
+    0 0 20px var(--color), 
+    0 0 30px var(--color); 
+ 
+    transition: 0.5s;
+}
+
+
+.ul-links  li.nav-item > a > span{
+    
+    transition:0.6s;
+} 
+
+.ul-links li.nav-item:hover > a > span{
+    
+    color:#6610f2; 
+    text-shadow: 0 0 5px #6610f2; 
+    transition:0.3s;
+} 
+
+.ul-links span:hover{
+
+    transform: rotate(360deg);
+}
+
+
+/*----------------------------------------------------*/
+/*----------------------------------------------------*/
+
+
+.ul-links-responsive{
+
+    background-color: #6710f285;
+    text-align: center;
+
+} 
+
+
+.ul-links-responsive > li:hover{
+
+    background-color: rgba(0, 255, 255, 0.459);
+   
+}
+
+.ul-links-responsive > li > a > span{
+
+    background-clip: text;
+    background-color:rgba(0, 255, 255);
+    color:rgba(0, 255, 255);
+    /* box-shadow: 1px 1px 5px rgb(0, 255, 255);  */
+}
+
+.ul-links-responsive > li:hover > a > span{
+
+    color: #6710f2;
+    /* box-shadow: 1px 1px 5px #6710f2; */
+}
+
+
+
+/*--------------------------------------------*/
+/*------------LINKS CONTACTO-------------------*/
+
+.ul-contacto{
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+
+    
+    /* margin: auto; */
+    padding: 0%;
+    width: 400px;
+    margin-top: 20px;
+    
+}
+
+ /* color: #19bd14; rgb(48, 156, 238) #6610f2 #d63384 #0d6efd #dc3545 #6610f2 */
+
+ .ul-contacto .nav-item a span{
+
+    transform: rotate(0deg);
+
+    /* --color:#6610f2;
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px rgb(48, 156, 238), 
+    0 0 20px var(--color), 
+    0 0 30px rgb(48, 156, 238); */
+    transition: 0.5s;
+}
+
+
+
+.ul-contacto .nav-item a:hover span{
+
+    transition: 0.5s;
+    transform: rotate(360deg);
+}
+
+
+
+
+@media screen and (max-width:400px){
+    
+    .ul-contacto{
+
+        width: 200px;
+        /* margin-top: 20px;
+         */
+    }
+}
+
+
+/*----------------------------*/
+/*---------------------------*/
+
+.ul-links-contacto{
+
+    width: 100%;
+
+    list-style: none;
+    padding: 0%;
+    text-align: right;
+
+    word-wrap: break-word;    
+}
+
+
+.ul-links-contacto li a i{
+    font-size: 1.5rem;
+    margin-bottom:5%; 
+}
+
+
+.ul-links-contacto li a{
+    color: white;
+    --color:#6610f2;
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px rgb(48, 156, 238), 
+    0 0 20px var(--color), 
+    0 0 30px rgb(48, 156, 238); 
+} 
+
+.ul-links-contacto li a:hover{
+    color: white;
+    --color:rgb(48, 156, 238);
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px var(--color), 
+    0 0 20px var(--color), 
+    0 0 30px var(--color); 
+} 
+
+
+.ul-links-contacto li a i{
+    color: white;
+    --color:#6610f2;
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px rgb(48, 156, 238), 
+    0 0 20px var(--color), 
+    0 0 30px rgb(48, 156, 238); 
+} 
+
+.ul-links-contacto li a:hover i{
+    color: white;
+    --color:rgb(48, 156, 238);
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px var(--color), 
+    0 0 20px var(--color), 
+    0 0 30px var(--color); 
+}
+
+
+
+
+
+
+
+
+
+

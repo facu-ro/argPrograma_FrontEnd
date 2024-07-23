@@ -24,9 +24,11 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"/*,"src/assets/bootstrap/bootstrap.min.css"*/,"src/assets/expansion-grid.css"
-            ],
-            "scripts": ["src/assets/jquery-3.4.1.min.js","src/assets/particles.min.js",/*"src/assets/bootstrap/bootstrap.min.js",*/"src/assets/particula.js","src/assets/miSwipper.js","src/assets/expansion-grid.js"]
+              "src/styles.css","src/assets/bootstrap/bootstrap.min.css"
+            ], //,"node_modules/aos/dist/aos.css"
+            "scripts": ["src/assets/jquery-3.4.1.min.js","src/assets/bootstrap/bootstrap.min.js",
+            "src/assets/particles.min.js",
+            "src/assets/particula.js","src/assets/miSwipper.js"] //"node_modules/aos/dist/aos.js"
           },
           "configurations": {
             "production": {

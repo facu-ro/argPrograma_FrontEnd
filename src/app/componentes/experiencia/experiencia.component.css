@@ -1,10 +1,54 @@
 
 
-#experencia{
+#experiencia{
 
-    width: 80%;
-    margin: auto;
+    margin-top:50px; 
+    margin-bottom:50px;
+}
 
+#experiencia> div:nth-child(2){
+
+    width:80%; 
+    margin:auto;
+
+   
+    --color:#6710f28f ;
+    box-shadow:  0 0 5px var(--color), 
+    0 0 10px var(--color), 
+    0 0 20px var(--color), 
+    0 0 30px var(--color); 
+    /* background-color: #fb0094; */
+
+    color:white;
+
+}
+
+.text-shadow-expe{
+    
+    color:antiquewhite;
+    --color:rgb(48, 156, 238);
+    text-shadow:  0 0 5px var(--color), 
+    0 0 10px var(--color); 
+    /* 0 0 20px var(--color);  */
+    /* 0 0 30px var(--color), 
+    0 0 40px var(--color), 
+    0 0 50px var(--color), 
+    0 0 60px var(--color);  */
+
+    font-family: "Audiowide";
+    
+}
+
+
+.accordion-item{
+
+    border-color: #6610f2;
+}
+
+
+.accordion-body, .accordion-button{
+    background-color:black;
+    color: white;
 }
 
 .botones{
@@ -17,6 +61,12 @@
 
 }
 
+.accordion-body{
+    word-wrap: break-word;
+}
+
+/*-----------------------------*/
+/*----------------------------*/
 .caja{
 
 
@@ -51,10 +101,6 @@
     height: .4rem;
 }
 
-.caja::-webkit-scrollbar-track{
-
-}
-
 
 .caja::-webkit-scrollbar-thumb{
 
@@ -66,18 +112,6 @@
 }
 
 
-.caja::-webkit-scrollbar-thumb:hover{
-
-    
-
-    
-}
-
-
-.shadow{
-
-    
-}
 
 .shadow::before,.shadow::after{
 
@@ -181,9 +215,6 @@
     height: .4rem;
 }
 
-.caja-descripcion::-webkit-scrollbar-track{
-
-}
 
 
 .caja-descripcion::-webkit-scrollbar-thumb{
@@ -199,3 +230,24 @@
 i{
     color:black
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

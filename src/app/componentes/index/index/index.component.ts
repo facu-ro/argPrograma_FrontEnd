@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 
+
 declare function particula(a?:any,b?:any)
 
 declare var particlesJS: any;
@@ -18,6 +19,8 @@ export class IndexComponent implements OnInit {
  
   ngOnInit() {
 
+    
+       
     particula()
 
  /* particlesJS.load('particles-js',{

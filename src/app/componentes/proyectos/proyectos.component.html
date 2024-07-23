@@ -2,14 +2,11 @@
 
  <section id="proyectos">
 
-  <div  style="margin-top:40px"> 
-    <h2 class="text-center">Proyectos</h2>
+  <div style="margin-top:40px"> 
+    <h2 id="titulo-proyecto" class="text-shadow text-center animate__animated" >Proyectos</h2>
     <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#proyecto-editar" (click)="agregarProyecto()" >
       agregar<i class="far fa-plus-square"></i></button>
   </div>
-
-
-
 
     <div class="miSwiper">
       <!-- Additional required wrapper -->
@@ -28,54 +25,32 @@
                 <span></span>
                 <span></span>
         
-                <div class="content">
+                <div class="content text-shadow-proyec">
         
-                  <h2>{{i.titulo}}</h2>      
-                    <h3>Post title</h3>
+                  <h3>{{i.titulo}}</h3>      
+                  <h4>Post title</h4>
         
                     
-                    <p class="text-center">{{i.descripcion}}</p>
+                  <p class="text-center">{{i.descripcion}}</p>
                     
           
-                    <div *ngIf="EstadoLogin" class="botones "  >
+                  <div *ngIf="EstadoLogin" class="botones "  >
       
-                      <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
-                     <!--  *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" -->
+                    <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
                     
-                      <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
+                    <!--  *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" -->
                     
-                    </div>
+                    <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
+                    
+                  </div>
 
-                    <a href="{{i.url}}" target="_blank">ver github</a>
+                  <a href="{{i.url}}" target="_blank">ver github</a>
                 
                 </div>
         
-               </div>
+              </div>
 
             </div>
-            <!--<div class="contenido-slide">
-
-              <figure>
-                <img src="../assets/imagenes/descarga.jpg" alt="">
-              </figure>
-              
-              <div>
-                <h2>{{i.titulo}}</h2>
-              </div>
-              <div>
-                <p class="text-center">{{i.descripcion}}</p>
-              </div>
-    
-              <div class="botones "  >
-    
-                <button data-bs-toggle="modal" data-bs-target="#proyecto-editar"  #boton (click)="ItemProyecto(i)"><i class="fas fa-edit"></i> </button> 
-                *ngIf="EstadoLogin" data-bs-toggle="modal" data-bs-target="#experiencia-editar" routerLink="/editExperiencia/{{i.id}}"    [routerLink]="['/editExperiencia/',i.id]" 
-              
-                <button  (click)="borrarProyecto(i)"><i class="fas fa-trash-alt"></i></button> 
-              
-              </div>
-
-            </div>-->
 
           </li> 
 
@@ -103,3 +78,15 @@
 
 
 <app-editar-proyecto></app-editar-proyecto>
+
+
+
+
+
+
+
+
+
+
+
+

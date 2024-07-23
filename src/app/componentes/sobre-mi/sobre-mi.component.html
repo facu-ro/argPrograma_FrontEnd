@@ -1,50 +1,48 @@
 
 <section id="sobre_mi" >
-    
+  
+  <div *ngIf="EstadoLogin" class="boton-editar" style="width: 100%; text-align:center;height:40px;" >
+    <button type="button" class="btn"  data-bs-toggle="modal" data-bs-target="#sobremi" (click)="ItemPresentacion(sobre_mi)">
+        <i class="fas fa-edit"></i>
+    </button>
+  </div>
 
- 
+  <div class="container-fluid">
 
-     <!--<source src="assets/imagenes/nebulosa2.mp4" type="video/mp4" />--> 
+    <div class="row align-items-center">
 
-    <div class="hola">
+      <div class=" col-lg-8">
+        <div class="hola d-flex flex-column justify-content-center align-items-center">
 
-      <h2> Mi nombre es Facundo<br>  Bienvenidos a mi portfolio. </h2>
+          <h2 class="bienvenida animacion-texto animate__animated"  id="bienvenida" >Bienvenidos   </h2> 
 
-    </div>
-
+          <!-- style="margin-top: 5%;" -->
+          <h3  id="h3" class="animate__animated mt-3"> Mi nombre es Facundo, soy <br><span id="escritura"  ></span></h3>
           
-          <!--*ngIf="EstadoLogin" style="width: 30px;height:40px;background-color:green;" {{sobre_mi.descripcion }} -->
-    <div *ngIf="EstadoLogin" class="boton-editar" style="width: 100%; text-align:center;height:40px;" >
-      <button type="button" class="btn"  data-bs-toggle="modal" data-bs-target="#sobremi" (click)="ItemPresentacion(sobre_mi)">
-          <i class="fas fa-edit"></i>
-      </button>
-    </div>
+          <app-links [menu]=3></app-links>
 
-    <div class="descripcion">
-    
-      <figure>
-        <img  src="../assets/imagenes/descarga.jpg" alt="foto de Facu"/>
-        <p >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque sapiente, inventore quasi culpa eum, nulla voluptatum corrupti, rerum odio dolorum facilis delectus veritatis nihil a impedit vitae modi est harum sed. Saepe officia quaerat debitis, eveniet soluta beatae aspernatur blanditiis totam excepturi, sequi reiciendis reprehenderit deleniti a id. Illum, reiciendis?
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, consequatur qui dolorem exercitationem tenetur tempore vero possimus corporis. Laboriosam qui unde voluptatem distinctio expedita nam, rerum ipsam blanditiis doloremque vel autem! Nemo dicta sequi officia exercitationem aliquam quisquam porro repudiandae quae ex, repellat hic. Maiores vel veritatis aliquid nostrum molestiae?
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui fuga, nihil delectus facere ex, id ipsa nisi, similique commodi accusantium quia maiores nostrum quis quidem sit inventore reiciendis voluptas placeat odit saepe. Mollitia quia beatae consectetur, hic eaque repellat vel! Obcaecati reiciendis provident repellat, temporibus beatae quos sapiente voluptas nesciunt!
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id reprehenderit alias quos suscipit at voluptatum similique! Totam nemo quasi asperiores iusto voluptate maiores excepturi accusamus sed ratione. Non id possimus harum minima incidunt voluptates aliquid molestias ex atque eum, blanditiis deleniti dolor libero qui laudantium quia ratione illo eaque accusamus.
-        </p>
-      </figure>
+          <h6 class="text-center text-shadow"><a href="mailto:95.rodriguez.facundo@gmail.com">95.rodriguez.facundo@gmail.com</a></h6>
+        
+        </div>
+      </div>
+      <div class="col-lg-4 align-self-end"  >
+
+        <figure class="animate__animated" id="figure-aos"  >  
+       
+          <img  class="img-responsive"  src="../assets/imagenes/pexels-gregcontreras-3177812-removebg-preview.png" alt=""/>
   
-    
+          <img  class="img-responsive"  src="../assets/imagenes/hacker (1).png" alt=""/>
+
+        </figure>
+          
+        
+      </div>
     </div>
+    
+  </div>
 
 
-  
- 
 </section>
 
-<!--   <div class="custom-shape-divider-bottom-1683513814">
-      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-          <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
-      </svg>
-    </div>
-   -->
 
 <app-aboutme-editar></app-aboutme-editar>

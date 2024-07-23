@@ -14,19 +14,19 @@ function particula(){
         }
       },
       "color": {
-        "value": "#ffffff"
+        "value": "#19bd14"//#ffffff  #6610f2
       },
       "shape": {
         "type": "circle",
         "stroke": {
           "width": 0,
-          "color": "#000000"
+          "color": "#000000" 
         },
         "polygon": {
           "nb_sides": 5
         },
         "image": {
-          "src": "img/github.svg",
+          "src": "img/github.svg ", 
           "width": 100,
           "height": 100
         }
@@ -54,7 +54,7 @@ function particula(){
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#ffffff",
+        "color": "#19bd14", //#ffffff #6610f2 
         "opacity": 0.4,
         "width": 1
       },
