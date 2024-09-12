@@ -12,11 +12,11 @@
     margin:auto;
 
    
-    --color:#6710f28f ;
+    --color:#6610f2;
     box-shadow:  0 0 5px var(--color), 
-    0 0 10px var(--color), 
-    0 0 20px var(--color), 
-    0 0 30px var(--color); 
+    0 0 10px #1d96bb, 
+    0 0 20px var(--color),
+    0 0 30px #1d96bb;  
     /* background-color: #fb0094; */
 
     color:white;

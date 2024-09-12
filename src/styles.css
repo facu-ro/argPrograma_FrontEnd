@@ -36,17 +36,21 @@
 
     color: antiquewhite;
     font-family: "Audiowide";
+
+    
     
 }
 
 
 .text-shadow-links{
     color: white;
+    text-decoration: none;
     --color:#6610f2;
     text-shadow:  0 0 5px var(--color), 
     0 0 10px rgb(48, 156, 238), 
     0 0 20px var(--color), 
     0 0 30px rgb(48, 156, 238); 
+    transition: .5s;
 }
 
 .text-shadow-links:hover{
@@ -56,6 +60,7 @@
     0 0 10px var(--color), 
     0 0 20px var(--color), 
     0 0 30px var(--color); 
+    transition: .5s;
 }
 
 

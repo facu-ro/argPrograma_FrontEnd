@@ -14,7 +14,7 @@ function particula(){
         }
       },
       "color": {
-        "value": "#19bd14"//#ffffff  #6610f2
+        "value": "#1d96bb"//#ffffff  #6610f2  19bd14
       },
       "shape": {
         "type": "circle",
@@ -54,7 +54,7 @@ function particula(){
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "#19bd14", //#ffffff #6610f2 
+        "color": "#1d96bb", //#ffffff #6610f2 #23d5abe5 #19bd14 #23b1d5
         "opacity": 0.4,
         "width": 1
       },
