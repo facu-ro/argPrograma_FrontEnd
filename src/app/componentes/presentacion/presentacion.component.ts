@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as AOS from 'aos';
+import { ServicioPresentacionService } from 'src/app/servicios/servicio-presentacion';
 import { ServicioScrollService } from 'src/app/servicios/servicio-scroll.service';
 
 @Component({
@@ -9,7 +10,11 @@ import { ServicioScrollService } from 'src/app/servicios/servicio-scroll.service
 })
 export class PresentacionComponent implements OnInit {
 
-  constructor(private scroll:ServicioScrollService) { }
+  descripcion:string;
+  imagen:string;
+
+  constructor(private scroll:ServicioScrollService,
+    private presentacion:ServicioPresentacionService) { }
 
   ngOnInit(): void {
 
@@ -30,18 +35,12 @@ export class PresentacionComponent implements OnInit {
     const b:HTMLElement = document.getElementById('p'); 
     this.scroll.viewPosition( dic_clases ).observe(b); 
 
+    this.presentacion.getObser.subscribe(d=>{
+      this.descripcion=d.descripcion;
+      this.imagen=d.imagen;
+    })
 
   }
-
-    // @HostListener('window:scroll', ['$event'])
-  // oncroll(event: Event) {
-  //   this.scrollPosition = window.scrollY || window.pageYOffset;
-  //   console.log('Scroll position:', this.scrollPosition);
-  // }
-
-  // ngOnChanges():void{
-  //   AOS.refresh() 
-  // }
 
 
 

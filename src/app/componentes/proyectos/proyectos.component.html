@@ -28,7 +28,7 @@
                 <div class="content text-shadow-proyec">
         
                   <h3>{{i.titulo}}</h3>      
-                  <h4>Post title</h4>
+                  <!-- <h4>Post title</h4> -->
         
                     
                   <p class="text-center">{{i.descripcion}}</p>
@@ -44,8 +44,9 @@
                     
                   </div>
 
-                  <a href="{{i.url}}" target="_blank">ver github</a>
+                  <a *ngIf="i.url_github" href="{{i.url_github}}" target="_blank">ver github</a>
                 
+                  <div><a *ngIf="i.url" href="{{i.url}}" target="_blank">ver app</a></div>
                 </div>
         
               </div>
@@ -75,6 +76,8 @@
     
 
  </section>
+
+
 
 
 <app-editar-proyecto></app-editar-proyecto>

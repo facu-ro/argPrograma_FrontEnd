@@ -1,10 +1,8 @@
 
-#sobre_mi {
-  /* margin: auto ; */
-
+#presentacion {
+ 
   text-align: center;
-  
-  /* background-image: none;*/
+ 
   display: flex;
   
   justify-content: center;
@@ -19,7 +17,7 @@
   
   /* background-size: 400%;  */
 
-  height: 100vh;
+  height: 100%;
 
   clip-path: polygon(0 0, 100% 0, 100% 83%, 0 100%);
 
@@ -54,27 +52,6 @@
   font-family: "Audiowide";
 }
 
-
-/* h6 a{
-  text-decoration: none;
-  color: white;
-  --color:#6610f2;
-  text-shadow:  0 0 5px var(--color), 
-  0 0 10px rgb(48, 156, 238), 
-  0 0 20px var(--color), 
-  0 0 30px rgb(48, 156, 238); 
-  transition: 0.5s;
-}
-
-h6 a:hover{
-  --color:rgb(48, 156, 238);
-  text-shadow:  0 0 5px var(--color), 
-  0 0 10px var(--color), 
-  0 0 20px var(--color), 
-  0 0 30px var(--color); 
- 
-  transition: 0.5s;
-} */
 
 
 @keyframes textoColor{
@@ -112,7 +89,7 @@ h6 a:hover{
 
 @media screen and (max-width: 800px){ 
 
-  #sobre_mi{
+  #presentacion{
 
     background-image:url('src/assets/imagenes/fondos/5.jpg');
     
@@ -128,7 +105,7 @@ h6 a:hover{
 
   }
 
-  /*.container-fluid .hola h2*/
+  
   .bienvenida{
     font-size: 2.5rem; 
     letter-spacing: 0rem;

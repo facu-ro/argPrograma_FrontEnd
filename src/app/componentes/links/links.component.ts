@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 
@@ -12,13 +13,21 @@ export class LinksComponent implements OnInit {
 
   @Input() menu:number;
 
-  
+  private url:string='../assets/json/datos.json';
 
-  constructor() { }
+  datos:any[]
+
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
    
     console.log(this.menu);
+
+    this.http.get<any>(this.url).subscribe(datos =>{
+
+      this.datos=datos.links
+    })
+  
   }
 
 }

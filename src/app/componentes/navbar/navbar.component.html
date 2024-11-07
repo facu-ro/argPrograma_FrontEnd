@@ -10,13 +10,14 @@
   </div>
 
   <ul [ngStyle]=" open ? {'background-color': 'rgba(103, 16, 242, 0.257)'} : {'background-color': 'transparent'}">
-    <li *ngIf="!EstadoLogin" class="btn btn-primary " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
-      data-bs-target="#login">Login <i class="fas fa-sign-in-alt"></i></li>
-
+    
+    <!-- <li *ngIf="!EstadoLogin" class="btn btn-primary " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
+      data-bs-target="#login">Login <i class="fas fa-sign-in-alt"></i>
+    </li>
 
     <li *ngIf="EstadoLogin" class="btn btn-danger" [ngClass]="open ? 'list': 'noList' ">
       <span (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
-    </li>
+    </li> -->
 
     <li routerLink="/" fragment="sobre_mi" [ngClass]="open ? 'list': 'noList' "> sobre mi</li>
     <li routerLink="/" fragment="experiencia"   [ngClass]="open ? 'list': 'noList' " >experiencias</li>  <!--(click)="goToSection()"-->
@@ -44,7 +45,7 @@ fixed-top sticky-top -->
  
   <div class="container-fluid  ">
     
-    <a class="navbar-brand " href="#"><img class="logo" src="./assets/imagenes/logo-arg-programa.png" alt=""></a>
+    <a class="navbar-brand text-shadow-links" href="#presentacion">Menu</a>
    
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" (click)="openMenu()">
@@ -54,13 +55,14 @@ fixed-top sticky-top -->
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
-        <li *ngIf="!EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
+        
+        <!-- <li *ngIf="!EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' " data-bs-toggle="modal"
           data-bs-target="#login"><button class=" btn btn-primary">Login <i class="fas fa-sign-in-alt"></i></button>
        </li>
   
         <li *ngIf="EstadoLogin" class="nav-item " [ngClass]="open ? 'list': 'noList' ">
           <span class="btn btn-danger" (click)="logout()">Logout <i class="fas fa-sign-in-alt"></i> </span>
-        </li>
+        </li> -->
         
         <li class="nav-item " routerLink="/" fragment="sobre_mi" > sobre mi</li>
         
@@ -84,4 +86,4 @@ fixed-top sticky-top -->
 
 
 
-<app-modal-login></app-modal-login>
+<!-- <app-modal-login></app-modal-login> -->

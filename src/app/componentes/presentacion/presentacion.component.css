@@ -1,20 +1,20 @@
 
 
-#presentacion{
+#sobre_mi{
 
     text-align: center;
     margin: 20px auto ;
 
 }
 
-#presentacion h2{
+#sobre_mi h2{
 
     margin-top: 50px;
     margin-bottom: 50px;
 }
  
 
-#presentacion .container-fluid{
+#sobre_mi .container-fluid{
     width: 80%;
     margin: auto;
 

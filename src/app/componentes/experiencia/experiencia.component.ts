@@ -13,11 +13,6 @@ import { EditarExperienciaComponent } from '../modals/experiencias/editar-experi
 
 declare var $:any
 
-declare function gridSwiper();
-
-declare function miGrilla();
-
-declare function particula(a?:any,b?:any)
 
 @Component({
   selector: 'app-experiencia',
@@ -49,9 +44,6 @@ export class ExperienciaComponent implements OnInit, AfterViewInit {
              // private servicio_login:ServicioLoginService
              private scroll:ServicioScrollService
             ){
-
-          //    window.addEventListener("load", ()=>{console.log("entro al evento"); this.generarTargetId()}  )
-              
              
   }
 
@@ -87,15 +79,6 @@ export class ExperienciaComponent implements OnInit, AfterViewInit {
     })
 
 
-    // this.servicio_experiencia.getDatosExperiencia.subscribe(data=>{
-
-    //   this.experiencias=data;
-
-    //   console.log("entro al servicio experiencia"); 
-      
-    //   // this.generarTargetId()
-
-    // })
 
 
   }

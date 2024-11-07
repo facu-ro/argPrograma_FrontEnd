@@ -13,8 +13,11 @@ export class ServicioProyectoService {
 
     datosProyectos:Proyecto[];
 
-    //'http://localhost:8080/api/proyecto/' 'https://portfolio-back-rywe.onrender.com/api/proyecto/'
-    private url:string='http://localhost:8080/api/proyecto/';
+    //'http://localhost:8080/api/proyecto/' 
+    //'https://portfolio-back-rywe.onrender.com/api/proyecto/'
+    //../assets/json/datos.json
+
+    private url:string='../assets/json/datos.json';
 
 
     
@@ -46,41 +49,26 @@ export class ServicioProyectoService {
     setObser(datos:Proyecto[]){
 
        // this.datosProyectos.push(datos)
-        
         this.obser.next(datos)
 
    }
  
-   //:Observable<Proyecto[]>
+   
    getDatos() {
     
-         this.http.get<Proyecto[]>(this.url + 'verProyectos/').subscribe(data=>{
+         this.http.get<Proyecto[]>(this.url ).subscribe(data=>{ //+ 'verProyectos/'
 
-            this.datosProyectos=data;
+            this.datosProyectos=data["proyectos"];
             this.setObser( this.datosProyectos);
 
         })
             
-         /*   .pipe(
-                
-                tap( data=>{
-                        
-                    this.obser.next(data);
-                    
-                }),
-                        
-                
-            ) */
                
     }
 
 
-    //:Observable<Proyecto>
     editar(datos:Proyecto){
 
-        
-
-        console.log(datos.id_proyecto)
 
        this.http.put<Proyecto>(this.url+'editarProyecto/',datos).subscribe(data=>{
 
@@ -92,67 +80,29 @@ export class ServicioProyectoService {
             
        })
 
-          /*  .pipe(
-                
-                tap( data=>{
-               
-                    this.getDatos().subscribe()
-           
-                })     
-            )*/
     
     }
 
-    //:Observable<Proyecto>
+
     agregar(dato:Proyecto){
 
         this.http.post<Proyecto>(this.url+ 'nuevaProyecto-Presentacion/'+'1', dato).subscribe(data=>{
 
-           /* console.log(data)
-            this.datosProyectos.push(dato);
-
-            this.setObser(this.datosProyectos)*/
-
             this.getDatos();
         })
        
-           /* .pipe(
-                
-                tap( data=>{
-            
-                  this.getDatos().subscribe()
-        
-                })
-            )*/
     }
 
 
-    //:Observable<any>
     borrar(dato:Proyecto){
 
         console.log(dato.id_proyecto)
        
         this.http.delete<any>(this.url+'borrarProyecto/'+ dato.id_proyecto).subscribe(data=>{
 
-          /* const indice= this.datosProyectos.findIndex(i => dato.id_proyecto == i.id_proyecto)
-
-          //this.datosProyectos.splice(1,indice)
-
-           const newDatos= this.datosProyectos.filter(i => i.id_proyecto != dato.id_proyecto)
-
-           console.log(newDatos)
-
-            this.setObser(newDatos)*/
             this.getDatos();
         })
 
-           /*     .pipe(
-                    tap( data=>{
-            
-                        this.getDatos().subscribe()
-        
-                    })
-                )*/
     }
 
 

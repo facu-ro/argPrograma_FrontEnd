@@ -4,6 +4,9 @@ import { HttpClient } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmbeddedTemplateAst } from '@angular/compiler';
 
+import { noWhitespaceValidator } from './validacion'; // Asegúrate de usar la ruta correcta
+
+
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
@@ -18,9 +21,9 @@ export class ContactoComponent implements OnInit {
 
     this.form=this.formBuilder.group({
 
-      destinatario:['',[Validators.required, Validators.email]],
-      asunto:['',[Validators.required]],
-      mensaje:['',[Validators.required]]
+      destinatario:['',[Validators.required, Validators.email, noWhitespaceValidator()]],
+      asunto:['',[Validators.required, Validators.minLength(1), noWhitespaceValidator()]],
+      mensaje:['',[Validators.required, Validators.minLength(1), noWhitespaceValidator()]]
 
     })
   
@@ -58,18 +61,19 @@ export class ContactoComponent implements OnInit {
     divAlert.appendChild(button)
     alerta.appendChild(divAlert)
 
-    // alerta.style.display=display;
-    // alerta.classList.add(clase)
-    // document.querySelector("#alerta > span").textContent=mensaje;
   }
   
 
   enviar(event:Event):void{
 
     event.preventDefault();
-    console.log("los datos del formulario son :", this.form.value)
+    // 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
+    //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
+    // console.log("los datos del formulario son :", this.form.value)
     if(this.form.valid){
-      this.http.post<any>("http://localhost:8080/enviar-correo", this.form.value).subscribe(data=>{
+      
+      //https://portfolio-back-rywe.onrender.com
+      this.http.post<any>("https://portfolio-back-rywe.onrender.com/enviar-correo", this.form.value, { responseType: 'text' as 'json' }).subscribe(data=>{
 
         //alert(data);
         this.mensajeAlerta("block","alert-success","mensaje enviado")

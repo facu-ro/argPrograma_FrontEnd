@@ -54,6 +54,7 @@
 }
 
 .text-shadow-links:hover{
+    
     color: white;
     --color:rgb(48, 156, 238);
     text-shadow:  0 0 5px var(--color), 

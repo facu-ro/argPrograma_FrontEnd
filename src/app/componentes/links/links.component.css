@@ -112,6 +112,10 @@ ul{
     /* box-shadow: 1px 1px 5px #6710f2; */
 }
 
+.ul-links-responsive > li > a > span:nth-child(2){
+
+    font-size: 1.1rem;
+}
 
 
 /*--------------------------------------------*/

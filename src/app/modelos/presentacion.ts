@@ -1,11 +1,11 @@
 export class Presentacion {
 
-   fk_persona:number;
-     nombre:string;
-     apellido:string;
-     foto:string;
-     descripcion:string;
-     banner:string;
+    fk_persona:number;
+    nombre:string;
+    apellido:string;
+    foto:string;
+    descripcion:string;
+    banner:string;
 
 
     constructor(fk_persona?:number,nombre?:string, apellido?:string, foto?:string, descripcion?:string, banner?:string){

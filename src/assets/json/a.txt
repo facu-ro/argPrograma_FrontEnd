@@ -1,0 +1,92 @@
+﻿
+Recibido en el 2023 de analista de sistemas en el Instituto Superior Nuestra Señora del Buen 
+Viaje, donde adquirí habilidades en desarrollo de software, análisis de sistemas, gestión de 
+proyectos, lo cual me permitió aplicar conocimientos en MySQL, SQLServer, PYTHON, JAVA, HTML, CSS, 
+JS, así como en la resolución de problemas técnicos y el trabajo en equipo.
+
+link plan de estudio: 
+
+
+Esta experiencia educativa me permitió desarrollar habilidades técnicas y analíticas, y aprender 
+a gestionar proyectos tecnológicos, además de fortalecer competencias en comunicación y 
+liderazgo.
+
+
+Durante mi formación, completé proyectos de [menciona algún proyecto relevante o interesante], 
+lo cual me permitió aplicar conocimientos en [menciona tecnologías o habilidades específicas como
+bases de datos, programación, redes, etc.].
+
+
+Además, desarrollé competencias en el uso de herramientas como [nombra algunas herramientas o 
+lenguajes que hayas utilizado, como SQL, Java, Python, etc.], así como en la resolución de 
+problemas técnicos y el trabajo en equipo.
+
+---------------------------------------------------------------------------------------------
+
+
+angular lenaguage service
+
+
+
+
+
+Python Avanzado - San Juan Tec
+
+En este curso se tocaron temas como: tipos de datos, POO, decoradores, properties, dataclasses, 
+manejo de fechas y archivos, envío de emails, ORM con SQLAlchemy.
+
+-----------------------------------------------------------------------------------------------
+
+
+
+Bootcamp Alkemy - POO en Python
+
+En este bootcamp se vieron temas que van desde fundamentos de Python, tipos de datos, POO, hasta la 
+creación de un ABM con Django.
+
+-----------------------------------------------------------------------------------------------
+
+
+
+Programación Web Full Stack - Argentina Programa
+
+A lo largo del curso se vieron temas para aprender a gestionar el tiempo, colaborar con otros 
+miembros del curso, metodologías ágiles, HTML, CSS, JavaScript, Angular, Java, Spring Boot, MySQL,
+GIT y GITHUB, despliegue de una aplicación web distribuida.
+
+--------------------------------------------------------------------------------------------------
+
+Big Data / Data Analytics - Codo a Codo 4.0
+
+En este curso se vieron los siguientes temas: fundamentos de Business Intelligence, bases de datos 
+relacionales, algoritmos, Python, planillas de cálculo para el análisis de datos, estadística básica, 
+visualización con Looker Studio.
+
+---------------------------------------------------------------------------------------------------
+
+AWS re/Start - certicficado AWS Cloud Practitioner
+
+Curso hecho a través de Potrero Digital, en el cual se vieron conceptos sobre redes, base de datos 
+relacionales, Python, GIT y GITHUB, computación en la nube, fundamentos de AWS y conceptos de los diferentes
+servicios que ofrece.
+Este curso fue fundamental para poder rendir la cerficación AWS Cloud Practitioner.
+
+-------------------------------------------------------------------------------------------------
+
+Pogramacion web - cfp 401 San Martin
+
+Este fue mi primer curso de programacion en el que aprendí sobre: HTML5, CSS3, Js, JQuery, librerías,
+Uso de Control de Versiones (GIT y GITHUB), PHP, base de datos relacional, MySQL. Desarrollo de 
+aplicaciones usando PHP y SQL.
+
+
+app
+  data -> services, text.temas
+  ui -> componentes
+  pages -> home
+
+
+
+
+
+

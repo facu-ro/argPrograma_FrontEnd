@@ -1,0 +1,138 @@
+{
+
+    "sobre_mi":{
+        "descripcion":"Hola! Mi nombre es Facundo, recientemente graduado como Analista de Sistemas, con una gran pasión por la tecnología. Aunque aún no tengo experiencia laboral en IT, he complementado mi formación con varios  cursos en desarrollo web, análisis de datos, entre otros, lo que sirvió para reforzar y  diversificar  mis habilidades técnicas. Estoy muy motivado por aprender y crecer profesionalmente, buscando participar en nuevos desafíos y  proyectos donde pueda aplicar y expandir los conocimientos adquiridos. Disfruto trabajando en equipo, comprometido en contribuir positivamente y aprender de los demás, ya   que creo que estas experiencias enriquecen mi desarrollo profesional y personal. Valoro un ambiente laboral dinámico donde pueda aportar lo aprendido y seguir creciendo tanto a nivel personal como profesional.",
+        "imagen":"../assets/imagenes/descarga.jpg"
+    },
+
+    "experiencia": 
+    [
+        {
+            "id":1,
+            "empresa":"Técnico superior en análisis de sistemas", 
+            "puesto": "2021-2023",
+            "certificado":"https://drive.google.com/file/d/1kUEDNrFLi3XheNGpwyLTfwj0NN_jyNJM/view?usp=drive_link",
+            "descripcion": "Recibido en el 2023 de analista de sistemas en el Instituto Superior Nuestra Señora del Buen Viaje, donde adquirí habilidades en desarrollo de software, análisis de sistemas, gestión de proyectos, lo cual me permitió aplicar conocimientos en MySQL, SQLServer, PYTHON, JAVA, HTML, CSS, JS, así como en la resolución de problemas técnicos y el trabajo en equipo."
+        },
+
+        {
+            "id":2,
+            "empresa": "Big Data / Data Analytics - Codo a Codo 4.0",
+            "puesto": "2024",
+            "certificado":"https://drive.google.com/file/d/1EpLf7uAlLWrSd2TApYquUE9KnNVjMWpl/view?usp=drive_link",
+            "descripcion": "En este curso se vieron los siguientes temas: fundamentos de Business Intelligence, bases de datos relacionales, algoritmos, Python, planillas de cálculo para el análisis de datos, estadística básica, visualización con Looker Studio."
+        },
+
+        {
+            "id":3,
+            "empresa": "AWS re/Start - certicficado AWS Cloud Practitioner",
+            "puesto": "2024",
+            "certificado":"https://www.credly.com/badges/1a7af0a0-8fd8-4ac1-a8fc-685ecebd9ae6/public_url",
+            "descripcion": "Curso hecho a través de Potrero Digital, en el cual se vieron conceptos sobre redes, base de datos relacionales, Python, GIT y GITHUB, computación en la nube, fundamentos de AWS y conceptos de los diferentes servicios que ofrece. Este curso fue fundamental para poder rendir la cerficación AWS Cloud Practitioner."
+        },
+
+        {
+            "id":4,
+            "empresa": "Python Avanzado - San Juan Tec",
+            "puesto": "2023",
+            "certificado":"https://drive.google.com/file/d/1_brRKfB1aqsnsAyfAGoS394Dy9EMFlQC/view?usp=drive_link",
+            "descripcion": "En este curso se tocaron temas como: tipos de datos, POO, decoradores, properties, dataclasses, manejo de fechas y archivos, envío de emails, ORM con SQLAlchemy."
+            
+        },
+
+        {
+            "id":5,
+            "empresa": "Bootcamp Alkemy - POO en Python",
+            "puesto": "2024",
+            "certificado":"https://drive.google.com/file/d/1IgIAcPhd977BZzl76l5zdBLggIP6kLIG/view?usp=drive_link",
+            "descripcion": "En este bootcamp se vieron temas que van desde fundamentos de Python, tipos de datos, POO, hasta la creación de un ABM con Django."            
+        },
+
+        {
+            "id":6,
+            "empresa": "Programación Web Full Stack - Argentina Programa",
+            "puesto": "2023",
+            "certificado":"https://drive.google.com/file/d/16gonuYjFFygZd8ALn8pdC77aKig5gz4h/view?usp=drive_link",
+            "descripcion": "A lo largo del curso se vieron temas para aprender a gestionar el tiempo, colaborar con otros miembros del curso, metodologías ágiles, HTML, CSS, JavaScript, Angular, Java, Spring Boot, MySQL, GIT y GITHUB, despliegue de una aplicación web distribuida."           
+        },
+
+        {
+            "id":7,
+            "empresa": "Pogramacion web - cfp 401 San Martin",
+            "puesto": "2021",
+            "certificado":"",
+            "descripcion": "Este fue mi primer curso de programacion en el que aprendí sobre: HTML5, CSS3, Js, JQuery, librerías, uso de control de versiones (GIT y GITHUB), PHP, base de datos relacional, MySQL. Desarrollo de aplicaciones usando PHP y SQL."
+        }
+    ],
+
+    "proyectos":
+    [
+
+        {
+            "id":1,
+            "titulo":"CRUD en Django",
+            "descripcion":"listado de productos y proveedores.",
+            "url_github":"https://github.com/facundo-rodriguez/alkemy-django",
+            "url":"http://facu5.pythonanywhere.com/"
+            
+        },
+
+        {
+            "id":2,
+            "titulo":"Galería de fotos",
+            "descripcion":"Homenaje al profesor Claudio Vacalluzo del Instituo Superior Nuestra Señora del Buen Viaje",
+            "url_github":"",
+            "url":"https://lujanbuenviaje.edu.ar/claudio.php"
+        },
+
+        {
+            "id":3,
+            "titulo":"Visualización en Looker Studio",
+            "descripcion":"Análisis de datos con python, hojas de calculo y visualizacion en Loocker Studio.",
+            "url_github":"",
+            "url":"https://lookerstudio.google.com/s/kdTTKMqY_YY"
+        },
+
+        {
+            "id":4,
+            "titulo":"CRUD en PHP ",
+            "descripcion":"simulación de un carrito de compras.",
+            "url_github":"https://github.com/facundo-rodriguez/tiendita",
+            "url":""
+        },
+
+        {
+            "id":5,
+            "titulo":"CRUD con JAVA Swing ",
+            "descripcion":"alta, baja, modificacion en un club social.",
+            "url_github":"https://github.com/facundo-rodriguez/clubSocial",
+            "url":""
+        }
+
+
+
+    ],
+
+    "links":
+    [   
+        {
+            "id":1,
+            "descripcion":"Instagram",
+            "icono":"fab fa-instagram", 
+            "url":"https://www.instagram.com/facu_jaja5/"
+        },
+        {
+            "id":2,
+            "descripcion":"LinkedIn",
+            "icono":"fab fa-linkedin",
+            "url":""
+        },
+        {
+            "id":3,
+            "descripcion":"Github",
+            "icono":"fab fa-github",
+            "url":"http://www.github.com/facundo-rodriguez"
+        }
+    ]
+    
+}

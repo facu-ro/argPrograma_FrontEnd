@@ -2,15 +2,20 @@
 
 <section id="experiencia" >
 
-  <div > <!---->
-    <h2 id="h2-titulo" class="text-shadow text-center animate__animated" style="  margin-bottom:50px; ">Experiencias</h2>
+  <div>
+  
+    <h2 id="h2-titulo" class="text-shadow text-center animate__animated" style="  margin-bottom:50px; ">
+      Educación      <!-- Experiencias -->
+    </h2>
+    
     <button *ngIf="EstadoLogin" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#experiencia-editar"
       (click)="agregarExperiencia()">
-      agregar<i class="far fa-plus-square"></i></button>
+      agregar<i class="far fa-plus-square"></i>
+    </button>
+  
   </div>
 
-  <div >
-
+  <div>
     <!-- text-success -->
     <div class="accordion" id="accordionExample" #accordionExample>
       <div class="accordion-item" *ngFor="let i of (datosObservable$ | async) ; index as indice">
@@ -23,7 +28,7 @@
                   [attr.data-bs-target]="'#item-acordeon_' + indice"
                   [attr.aria-controls]="'item-acordeon_' + indice"
                   aria-expanded="false">
-            {{ i.empresa }} {{ i.puesto }}
+            {{ i.empresa }} <!--{{ i.puesto }} -->
           </button>
         </h3>
         
@@ -37,7 +42,11 @@
           </div>
           
           <div class="accordion-body" [attr.aria-labelledby]="'heading_' + indice">
-            {{ i.descripcion }} {{ indice }}  
+            {{ i.descripcion }} <!--{{ indice }}  -->
+
+            <p *ngIf="i.certificado">
+              Certificado: <a [attr.href]="i.certificado" target="_blank">{{i.certificado}}</a>
+            </p>
           </div>
         </div>
       </div>
